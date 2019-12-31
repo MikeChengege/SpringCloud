@@ -30,13 +30,18 @@ import java.util.concurrent.TimeoutException;
 @EnableFeignClients
 public class ProductViewServiceRibbonApplication
 {
-    public static void main( String[] args )
-    {
+    public static void main(String[] args) {
+        //判断 rabiitMQ 是否启动
+        int rabbitMQPort = 5672;
+        if(NetUtil.isUsableLocalPort(rabbitMQPort)) {
+            System.err.printf("未在端口%d 发现 rabbitMQ服务，请检查rabbitMQ 是否启动", rabbitMQPort );
+            System.exit(1);
+        }
         int port = 0;
-        int defaultPort = 8010;
+        int defaultPort = 8012;
         Future<Integer> future = ThreadUtil.execAsync(() ->{
             int p = 0;
-            System.out.println("请于5秒钟内输入端口号, 推荐  8010  超过5秒将默认使用 " + defaultPort);
+            System.out.println("请于5秒钟内输入端口号, 推荐  8012 、 8013  或者  8014，超过5秒将默认使用"+defaultPort);
             Scanner scanner = new Scanner(System.in);
             while(true) {
                 String strPort = scanner.nextLine();
@@ -53,7 +58,7 @@ public class ProductViewServiceRibbonApplication
             return p;
         });
         try{
-            port=future.get(5, TimeUnit.SECONDS);
+            port=future.get(5,TimeUnit.SECONDS);
         }
         catch (InterruptedException | ExecutionException | TimeoutException e){
             port = defaultPort;
@@ -62,10 +67,11 @@ public class ProductViewServiceRibbonApplication
             System.err.printf("端口%d被占用了，无法启动%n", port );
             System.exit(1);
         }
-        new SpringApplicationBuilder(ProductViewServiceRibbonApplication.class).properties("service.port="+port).run(args);
+        new SpringApplicationBuilder(ProductViewServiceRibbonApplication.class).properties("server.port=" + port).run(args);
+
     }
     @Bean
-    public Sampler defaultSmpler(){
+    public Sampler defaultSampler() {
         return Sampler.ALWAYS_SAMPLE;
     }
 }

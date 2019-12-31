@@ -1,12 +1,20 @@
 spring:
   application:
-    name: product-view-service-ribbon
-  zipkin:
-    base-url: http://localhost:9411
+    name: product-view-service-feign
   thymeleaf:
     cache: false
     prefix: classpath:/templates/
     suffix: .html
     encoding: UTF-8
+    content-type: text/html
     mode: HTML5
-
+  zipkin:
+      base-url: http://localhost:9411
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
