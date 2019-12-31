@@ -9,7 +9,7 @@ public class AccessViewService {
         while (true){
             i++;
             System.out.println("第"+i+"遍");
-            ThreadUtil.sleep(1000);
+            ThreadUtil.sleep(100);
             String html = HttpUtil.get("http://127.0.0.1:8012/products");
             System.out.println("html1 length "+html.length());
             String html1 = HttpUtil.get("http://127.0.0.1:8013/products");

@@ -12,11 +12,9 @@
       <module>viewServiceRibbon</module>
       <module>configServer</module>
       <module>hystrixDashboard</module>
-      <module>turbine</module>
-    <module>turbine</module>
-    <module>turbine</module>
-    <module>turbine</module>
       <module>trubine</module>
+    <module>zuulServer</module>
+
   </modules>
 
 

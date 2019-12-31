@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="viewServiceRibbon" />
         <module name="trubine" />
+        <module name="zuulServer" />
         <module name="configServer" />
         <module name="productDataService" />
         <module name="hystrixDashboard" />
@@ -16,6 +17,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="turbine" target="1.8" />
+      <module name="zuul" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -27,6 +29,8 @@
       <module name="trubine" options="-parameters" />
       <module name="turbine" options="-parameters" />
       <module name="viewServiceRibbon" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+      <module name="zuulServer" options="-parameters" />
     </option>
   </component>
 </project>
