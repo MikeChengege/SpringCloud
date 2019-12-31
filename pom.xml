@@ -11,6 +11,12 @@
     <module>productDataService</module>
       <module>viewServiceRibbon</module>
       <module>configServer</module>
+      <module>hystrixDashboard</module>
+      <module>turbine</module>
+    <module>turbine</module>
+    <module>turbine</module>
+    <module>turbine</module>
+      <module>trubine</module>
   </modules>
 
 

@@ -4,7 +4,9 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/configServer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eurekaServer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrixDashboard" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/productDataService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/trubine" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/viewServiceRibbon" charset="UTF-8" />
   </component>
 </project>
