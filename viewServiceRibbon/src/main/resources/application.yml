@@ -1,6 +1,8 @@
 spring:
   application:
     name: product-view-service-feign
+  profiles:
+    active: qas
   thymeleaf:
     cache: false
     prefix: classpath:/templates/
