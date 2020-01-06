@@ -1,5 +1,6 @@
 package com.stu.springcloud.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.stu.springcloud.modle.Product;
@@ -11,6 +12,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
@@ -26,7 +28,7 @@ public class ProductController {
         List<Product> lp = productService.listProduct();
         m.addAttribute("version",version);
         m.addAttribute("ps",lp);
-        return  "page/products";
+        return  "products";
     }
     @RequestMapping("/userList")
     public Object userList(Model m){
@@ -37,6 +39,12 @@ public class ProductController {
     @RequestMapping("/Mosttv/index")
     public String indexPag(Model m){
         m.addAttribute("name","thymeleaf");
-        return  "page/index";
+        return  "index";
+    }
+    @RequestMapping("/getVideoInf")
+    @ResponseBody
+    public List<User> getVideoInf(Model m){
+        List<User> lp = new ArrayList<>();
+        return lp;
     }
 }

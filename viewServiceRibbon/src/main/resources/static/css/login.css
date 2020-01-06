@@ -1,0 +1,40 @@
+body {
+    background-image: url("/static/image/login_bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#login_frame {
+    width: 400px;
+    height: 300px;
+    padding: 13px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+
+    background-color: rgba(240, 255, 255, 0.5);
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#btn_login {
+    float: left;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+#btn_register {
+    margin-top: 30px;
+}#btn_back {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#login_control {
+    padding: 0 28px;
+}

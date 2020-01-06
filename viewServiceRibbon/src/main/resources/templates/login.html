@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MostTV登陆</title>
+    <script type="application/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
+    <script type="application/javascript" src="../static/js/loginAndRegist/login.js" th:src="@{/static/js/loginAndRegist/login.js}"></script>
+    <script type="application/javascript" src="../static/js/bootstrap.min.js" th:src="@{/static/js/bootstrap.min.js}"></script>
+    <script type="application/javascript" src="../static/js/clipboard.min.js" th:src="@{/static/js/clipboard.min.js}"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/bootstrap.css" th:href="@{/static/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/login.css" th:href="@{/static/css/login.css}">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/image/tubiao.ico" th:src="@{/static/image/tubiao.ico}" media="screen" />
+</head>
+<body>
+<div id="login_frame">
+    <h3>MostTV登陆</h3>
+    <form method="post">
+        <span id="namespan" style="float: left; background-color: #3278b3" ></span><br>
+        <input class="form-control" type="text" id="username" placeholder="请输入用户名"/><br>
+
+        <input class="form-control" type="password" id="password" placeholder="请输入密码"/>
+        <div id="login_control">
+            <button id="btn_login" class="btn btn-primary" >登录</button>
+            <button id="btn_register" class="btn btn-info">注册</button>
+
+            <button id="btn_back" class="btn btn-warning">返回主页</button>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
