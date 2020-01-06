@@ -1,2 +1,2 @@
 # SpringCloud
-这是一个分布式学习框架 父项目名称为springcloud
+这是一个分布式项目改造计划，目标是之前的一个springboot项目。整合升级。
