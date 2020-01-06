@@ -1,6 +1,7 @@
 package com.stu.springcloud.controller;
 
 import com.stu.springcloud.model.Product;
+import com.stu.springcloud.model.User;
 import com.stu.springcloud.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,11 @@ public class ProductController {
     @RequestMapping("/products")
     public  Object product(){
         List<Product> lp = productService.listProduct();
+        return  lp;
+    }
+    @RequestMapping("/userList")
+    public  Object userList(){
+        List<User> lp = productService.listUser();
         return  lp;
     }
 }

@@ -3,6 +3,7 @@ package com.stu.springcloud.service;
 
 import com.stu.springcloud.client.ProductClientRibbon;
 import com.stu.springcloud.modle.Product;
+import com.stu.springcloud.modle.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,4 +16,7 @@ public class ProductService {
     public List<Product> listProduct(){
         return productClientRibbon.listProduct();
     }
+    public List<User> userList(){
+        return productClientRibbon.userList();
+    };
 }

@@ -1,7 +1,10 @@
 package com.stu.springcloud.service;
 
 
+import com.stu.springcloud.mapper.UserInfoMapper;
 import com.stu.springcloud.model.Product;
+import com.stu.springcloud.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +13,8 @@ import java.util.List;
 
 @Service
 public class ProductService {
+    @Autowired
+    UserInfoMapper userInfoMapper;
     @Value("${server.port}")
     String port;
     public List<Product> listProduct(){
@@ -19,4 +24,10 @@ public class ProductService {
         lp.add(new Product(3,"pro "+port,12));
         return  lp;
     }
+    public List<User> listUser(){
+        List<User> lp = new ArrayList<>();
+        lp=userInfoMapper.get();
+        return  lp;
+    }
+
 }
