@@ -16,7 +16,4 @@ public class ProductService {
     public List<Product> listProduct(){
         return productClientRibbon.listProduct();
     }
-    public List<User> userList(){
-        return productClientRibbon.userList();
-    };
 }

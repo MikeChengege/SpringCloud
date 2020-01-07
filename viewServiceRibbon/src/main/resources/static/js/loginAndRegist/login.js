@@ -12,7 +12,7 @@ $(function(){
                 {
                     if(data[key]=="success"){
                         $("#namespan").html("密码正确");
-                        window.location.href = "/MostTV/index"
+                        window.location.href = "/Mosttv/index"
                     }else if(data[key]=="error"){
                         $("#namespan").html("密码错误");
                     }else if(data[key]=="NoUser"){

@@ -1,7 +1,7 @@
 
 $(function () {
     $("#shouye").click(function () {
-        window.location.href="/MostTV";
+        window.location.href="/Mosttv/index";
     })
     $(function () {
         $("#left").mouseover(function(){
@@ -71,7 +71,7 @@ $(function () {
                         var hadtime= GetDateDiff(data.video_time,now,"hour");
                         a++;
                         var html="<div class=\"thume\" onclick='intoPlayPage("+data.id+",\""+data.video_title+"\")' style=\"cursor: pointer\"><div class=\"thumeTop\">";
-                        html+="<img src="+data.video_pic+" style=\"width: 210px; height: 120px;\"/></div><div class=\"thumeCanent\">"
+                        html+="<img src="+data.video_pic+"  style=\"width: 210px; height: 120px;\"/></div><div class=\"thumeCanent\">"
                         html+="<span class=\"txt1\" style=\"font-weight:bold\">"+data.video_title+"</span></div><div class=\"thumeBelow\">"
                         html+="<span class=\"txt2\" style=\"color: #606060\">"+data.video_peop+"</span><br/>"
                         html+="<span class=\"txt2\" style=\"color: #606060\">"+data.video_hadvisit+" 次观看,"+hadtime+" 小时前</span></div></div>"

@@ -19,9 +19,4 @@ public class ProductController {
         List<Product> lp = productService.listProduct();
         return  lp;
     }
-    @RequestMapping("/userList")
-    public  Object userList(){
-        List<User> lp = productService.listUser();
-        return  lp;
-    }
 }

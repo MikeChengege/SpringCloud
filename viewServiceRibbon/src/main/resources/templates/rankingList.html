@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:include="index"></div>
+<div id="right">
+    <div id="rightTop">
+        <div id="hr">
+            <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;width: 860px" />
+        </div>
+    </div>
+    <div id="rightBottom">
+    </div>
+</div>
+<script type="application/javascript">
+    $(function () {
+        $("#right").remove();
+        $("#index").removeAttr("style")
+        $("#mostSee").removeAttr("style")
+        $("#rankingList").attr("style","color: red");
+    })
+</script>
+<script type="application/javascript" src="../static/js/ranklist.js" th:src="@{/static/js/ranklist.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/rankinglist.css" th:href="@{/static/css/rankinglist.css}">
+</body>
+</html>

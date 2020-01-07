@@ -14,6 +14,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 
 @Controller
 @RefreshScope
@@ -30,21 +33,22 @@ public class ProductController {
         m.addAttribute("ps",lp);
         return  "products";
     }
-    @RequestMapping("/userList")
-    public Object userList(Model m){
-        List<User> lp = productService.userList();
-        m.addAttribute("ps",lp);
-        return  "userList";
-    }
     @RequestMapping("/Mosttv/index")
-    public String indexPag(Model m){
-        m.addAttribute("name","thymeleaf");
+    public String indexPag(HttpSession session, HttpServletRequest request){
+        if(session.getAttribute("useInfo")!=null){
+            User u = (User)session.getAttribute("useInfo");
+            session.setAttribute("sessionUser",u);
+        }else {
+            session.setAttribute("sessionUser",null);
+        }
         return  "index";
     }
-    @RequestMapping("/getVideoInf")
-    @ResponseBody
-    public List<User> getVideoInf(Model m){
-        List<User> lp = new ArrayList<>();
-        return lp;
+    @RequestMapping("/Mosttv/mostsee")
+    public String mostSee() {
+        return "mostsee";
+    }
+    @RequestMapping("/Mosttv/rankingList")
+    public String rankingList() {
+        return "rankingList";
     }
 }

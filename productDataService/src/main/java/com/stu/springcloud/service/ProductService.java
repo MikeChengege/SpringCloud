@@ -24,10 +24,4 @@ public class ProductService {
         lp.add(new Product(3,"pro "+port,12));
         return  lp;
     }
-    public List<User> listUser(){
-        List<User> lp = new ArrayList<>();
-        lp=userInfoMapper.get();
-        return  lp;
-    }
-
 }

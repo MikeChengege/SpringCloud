@@ -45,7 +45,13 @@
         <div id="topRight" style="float: left;font-size: 20px">
             <a href="#"><span id="upload" class="glyphicon glyphicon-cloud-upload"data-toggle="tooltip" data-placement="left" title="上传"/></span></a>
             <a href="#"><span id="sharehap" class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="right" title="分享"/></span></a>
-            <a href="/templates/login.html"><span id="logintext">登录</span></a>
+
+            <a th:if="${session.sessionUser}" id="hadlogintext">
+                 欢迎你：<span th:text="${session.sessionUser.username}"></span>
+            </a>
+            <a th:unless="${session.sessionUser}">
+                    <a href="/templates/login.html"><span id="logintext">登录</span></a>
+            </a>
         </div>
     </div>
 </nav>

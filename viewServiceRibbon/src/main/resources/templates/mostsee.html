@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+</head>
+<body>
+<div th:include="index"></div>
+<div id="right">
+    <div id="rightTop">
+        <div class="bigLog">
+            <a href="tvshow">
+                <span class="glyphicon glyphicon-hd-video" style="font-size: 50px"></span><br><br>
+                <span style="color:#606060">美剧</span>
+            </a>
+        </div>
+        <div class="bigLog" style="margin-left: 50px">
+            <a href="filmshow">
+                <span class="glyphicon glyphicon-film" style="font-size: 50px"></span><br><br>
+                <span style="color:#606060">电影</span>
+            </a>
+        </div>
+        <div class="bigLog" style="margin-left: 50px">
+            <a href="musicshow">
+                <span class="glyphicon glyphicon-book" style="font-size: 50px"></span><br><br>
+                <span style="color:#606060">学习</span>
+            </a>
+        </div>
+        <div id="hr">
+            <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;width: 860px" />
+        </div>
+    </div>
+    <div id="rightBottom">
+    </div>
+</div>
+<script type="application/javascript">
+    $(function () {
+        $("#right").remove();
+        $("#index").removeAttr("style")
+        $("#rankingList").removeAttr("style")
+        $("#mostSee").attr("style","color: red");
+    })
+</script>
+<script type="application/javascript" src="../static/js/mostsee.js" th:src="@{/static/js/mostsee.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/mostsee.css" th:href="@{/static/css/mostsee.css}">
+</body>
+</html>

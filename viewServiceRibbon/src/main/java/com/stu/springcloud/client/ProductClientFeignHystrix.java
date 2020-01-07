@@ -1,12 +1,19 @@
 package com.stu.springcloud.client;
 
+import cn.hutool.json.JSONObject;
 import com.stu.springcloud.modle.Product;
 import com.stu.springcloud.modle.User;
+import com.stu.springcloud.modle.Video;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 数据微服务无法连接后回调类
+ */
 @Component
 public class ProductClientFeignHystrix  implements ProductClientRibbon{
     public List<Product> listProduct() {
@@ -20,5 +27,25 @@ public class ProductClientFeignHystrix  implements ProductClientRibbon{
         List<User> lp = new ArrayList<>();
         lp.add(new User());
         return lp;
+    }
+
+    @Override
+    public User Verification(String username) {
+        return null;
+    }
+
+    @Override
+    public List<Video> getVideoInf() {
+        return null;
+    }
+
+    @Override
+    public List<Video> mostseeVideoInf() {
+        return null;
+    }
+
+    @Override
+    public List<Video> getRankBothAll() {
+        return null;
     }
 }

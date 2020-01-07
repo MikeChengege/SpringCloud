@@ -1,0 +1,37 @@
+    a{ color:#000; text-decoration:none;}
+    a:link{ color:#000; text-decoration:none;}
+    a:hover{color:#C03;text-decoration:none;}
+    a:active{ color:#000; text-decoration:none;}
+    a:visited{
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+#right{
+    margin-top: 80px;
+    position:absolute;
+    left:20%;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow-y:auto; overflow-x:hidden;
+    /*background-color: #0f0f0f;*/
+}
+#rightTop{
+    margin-left: 80px;
+    width: 800px;
+    height: 150px;
+}
+.bigLog{
+    text-align: center;
+    width: 100px;
+    height: 120px;
+    float: left;
+    margin-top: 10px;
+}
+#rightBottom{
+    margin-left: 80px;
+    width: 860px;
+    height: 600px;
+}

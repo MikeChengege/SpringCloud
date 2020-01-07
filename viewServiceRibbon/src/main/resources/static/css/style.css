@@ -7,6 +7,7 @@
 	color:#4d4d4d;
     overflow-y: hidden;
     overflow-x: hidden;
+
 }
  /*定义滚动条轨道*/
      #left::-webkit-scrollbar-track
@@ -55,7 +56,9 @@
 }
 #logintext{
     margin-left: 10%;
-
+}
+#hadlogintext{
+    margin-left: 10%;
 }
 #below{
     float:top;
