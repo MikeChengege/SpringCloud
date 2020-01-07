@@ -2,6 +2,8 @@ package com.stu.springcloud.controller;
 
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.stu.springcloud.modle.Video;
 import com.stu.springcloud.service.VideoInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +44,7 @@ public class VideoController {
         List<Video> limag = videoInfoService.getRankBothAll();
         return limag;
     }
-/*    @RequestMapping("/getvideoPage")
+   @RequestMapping("/getvideoPage")
     @ResponseBody
     public PageInfo getPageVideo(Model m, @RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "size", defaultValue = "5") int size) throws Exception {
         PageHelper.startPage(start,size,"id desc");
@@ -60,7 +62,7 @@ public class VideoController {
         PageInfo<Video> page = new PageInfo<>(lvo);
         m.addAttribute("page", page);
         return page;
-    }*/
+    }
 
 
 //    @RequestMapping("/getVideoById")
