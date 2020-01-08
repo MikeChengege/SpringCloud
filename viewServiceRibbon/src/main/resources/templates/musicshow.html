@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:include="index"></div>
+<div id="right">
+    <div id="rightTop">
+        <div class="bigLog">
+            <span class="glyphicon glyphicon-book" style="font-size: 50px"></span>
+        </div>
+        <div class="bigTxt">
+            <span  style="font-size: 20px">学习</span><br>
+            <span  style="font-size: 10px;color: #606060">观看热门技术教学视频</span>
+        </div>
+    </div>
+    <div class="tvshowBottom">
+        <div class="tvshowtitle">
+            <span style="font-weight: bold">热门学习视频</span>
+        </div>
+        <section class="examples" >
+            <div class="container" style="width: 900px;">
+                <div class="carousel-example">
+                    <!-- FLEXIBLE BOOTSTRAP CAROUSEL -->
+                    <div id="simple-content-carousel" class="carousel flexible slide" data-ride="carousel" data-interval="5000" data-wrap="true">
+                        <div class="items">
+                            <div class="flex-item" id="item1">
+                                <a href="">
+                                    <img class="img-responsive" src=""/>
+                                    <span style="font-weight: bold;"></span>
+                                </a>
+                            </div>
+                            <div class="flex-item" id="item2">
+                                <a href="">
+                                    <img class="img-responsive" src=""/>
+                                    <span style="font-weight: bold;float: left"></span>
+                                </a>
+                            </div>
+                            <div class="flex-item" id="item3">
+                                <a href="">
+                                    <img class="img-responsive" src=""/>
+                                    <span style="font-weight: bold;float: left"></span>
+                                </a>
+                            </div>
+                            <div class="flex-item" id="item4">
+                                <a href="">
+                                    <img class="img-responsive" src=""/>
+                                    <span style="font-weight: bold;float: left"></span>
+                                </a>
+                            </div>
+                            <div class="flex-item" id="item5">
+                                <a href="">
+                                    <img class="img-responsive" src=""/>
+                                    <span style="font-weight: bold;float: left"></span>
+                                </a>
+                            </div>
+                            <div class="flex-item" id="item6">
+                                <a href="">
+                                    <img class="img-responsive" src=""/>
+                                    <span style="font-weight: bold;float: left"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-inner" role="listbox">
+
+                        </div>
+
+                        <a class="right carousel-control" href="#simple-content-carousel" role="button" data-slide="next">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;" />
+        <div class="allThume" style="margin-left: 0px">
+            <div class="mainTitle">
+                <span class="title">Java框架</span>
+            </div>
+            <div id="javaframework"></div>
+            <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+        </div>
+        <div class="allThume" style="margin-left: 0px">
+            <div class="mainTitle">
+                <span class="title">Web前端</span>
+            </div>
+            <div id="webfront"></div>
+
+            <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+        </div>
+    </div>
+</div>
+<script type="application/javascript">
+    $(function () {
+        $("#right").remove();
+        $("#index").removeAttr("style")
+        $("#rankingList").removeAttr("style")
+        $("#mostSee").removeAttr("style");
+        $("#musicshowLabel").attr("style","background-color:#eeeeee")
+    })
+</script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/tvshow.css" th:href="@{/static/css/tvshow.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/musicshow/bootstrap.min.css" th:href="@{/static/css/musicshow/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/musicshow/bootstrap-select.min.css" th:href="@{/static/css/musicshow/bootstrap-select.min.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/musicshow/flexible-bootstrap-carousel.css" th:href="@{/static/css/musicshow/flexible-bootstrap-carousel.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/musicshow/font-awesome.min.css" th:href="@{/static/css/musicshow/font-awesome.min.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/musicshow/styles.css" th:href="@{/static/css/musicshow/styles.css}">
+
+<script type="application/javascript" src="../static/js/musicshow/musicshow.js" th:src="@{/static/js/musicshow/musicshow.js}"></script>
+<script type="application/javascript" src="../static/js/musicshow/bootstrap.min.js" th:src="@{/static/js/musicshow/bootstrap.min.js}"></script>
+<script type="application/javascript" src="../static/js/musicshow/bootstrap-select.min.js" th:src="@{/static/js/musicshow/bootstrap-select.min.js}"></script>
+<script type="application/javascript" src="../static/js/musicshow/flexible-bootstrap-carousel.js" th:src="@{/static/js/musicshow/flexible-bootstrap-carousel.js}"></script>
+    <!--<script type="application/javascript" src="../static/js/musicshow/jquery-1.11.0.min.js" th:src="@{/static/js/musicshow/jquery-1.11.0.min.js}"></script>-->
+<!--<script type="application/javascript" src="../static/js/musicshow/jquery-2.1.1.min.js" th:src="@{/static/js/musicshow/jquery-2.1.1.min.js}"></script>-->
+<script type="application/javascript" src="../static/js/musicshow/script.js" th:src="@{/static/js/musicshow/script.js}"></script>
+</body>
+</html>

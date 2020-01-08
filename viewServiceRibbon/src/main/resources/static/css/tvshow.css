@@ -1,0 +1,60 @@
+    a{ color:#000; text-decoration:none;}
+    a:link{ color:#000; text-decoration:none;}
+    a:hover{color:#C03;text-decoration:none;}
+    a:active{ color:#000; text-decoration:none;}
+    a:visited{
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+#right{
+    margin-top: 60px;
+    position:absolute;
+    left:20%;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow-y:auto; overflow-x:hidden;
+}
+#rightTop{
+    margin-left: 80px;
+    width: 500px;
+    height: 100px;
+    float: left;
+    /*padding-top: 10px;*/
+}
+.bigLog{
+    text-align: center;
+    width: 100px;
+    height: 120px;
+    float: left;
+    margin-top: 15px;
+} .bigTxt{
+    width: 200px;
+    height: 120px;
+    float: left;
+    margin-top: 20px;
+}
+.tvshowBottom{
+    float: left;
+    margin-left: 80px;
+    width: 850px;
+    height: 350px;
+}
+.tvshowpic{
+        margin-top: 15px;
+        width: 210px;
+        height: 350px;
+        float: left;
+}
+.picBig{
+    width: 200px;
+    height: 280px;
+}
+.simtxt{
+    width: 210px;
+    height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+}

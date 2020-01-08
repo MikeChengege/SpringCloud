@@ -3,6 +3,7 @@ package com.stu.springcloud.client;
 import cn.hutool.json.JSONObject;
 import com.stu.springcloud.modle.Product;
 import com.stu.springcloud.modle.User;
+import com.stu.springcloud.modle.UserAdv;
 import com.stu.springcloud.modle.Video;
 import org.springframework.stereotype.Component;
 
@@ -45,7 +46,17 @@ public class ProductClientFeignHystrix  implements ProductClientRibbon{
     }
 
     @Override
-    public List<Video> getRankBothAll() {
+    public List<Video> getRankinfo() {
+        return null;
+    }
+
+    @Override
+    public List<Video> getAllTv(int videoType) {
+        return null;
+    }
+
+    @Override
+    public List<Video> submitAdvice(UserAdv uadv) {
         return null;
     }
 }

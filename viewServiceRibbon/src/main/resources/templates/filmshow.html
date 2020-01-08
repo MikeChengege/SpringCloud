@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:include="index"></div>
+<div id="right">
+    <div id="rightTop">
+        <div class="bigLog">
+            <span class="glyphicon glyphicon-film" style="font-size: 50px"></span>
+        </div>
+        <div class="bigTxt">
+            <span  style="font-size: 20px">电影</span><br>
+            <span  style="font-size: 10px;color: #606060">观看最新、最精彩的热门内容</span>
+        </div>
+    </div>
+    <div class="tvshowBottom">
+        <div class="tvshowtitle">
+            <span>本周最热</span>
+        </div>
+        <div id="mosthot">
+        </div>
+    </div>
+    <div class="tvshowBottom" style="margin-top: 20px">
+        <div class="tvshowtitle">
+            <span>科幻类</span>
+        </div>
+        <div id="science">
+        </div>
+    </div>
+    <div class="tvshowBottom" style="margin-top: 20px">
+        <div class="tvshowtitle">
+            <span>剧情类</span>
+        </div>
+        <div id="thestory">
+
+        </div>
+    </div>
+    <div class="tvshowBottom" style="margin-top: 20px">
+        <div class="tvshowtitle">
+            <span>奇幻类</span>
+        </div>
+        <div id="fantasy">
+
+        </div>
+    </div>
+</div>
+<script type="application/javascript">
+    $(function () {
+        $("#right").remove();
+        $("#index").removeAttr("style")
+        $("#rankingList").removeAttr("style")
+        $("#mostSee").removeAttr("style");
+        $("#filmshowLabel").attr("style","background-color:#eeeeee")
+    })
+</script>
+<script type="application/javascript" src="../static/js/filmshow.js" th:src="@{/static/js/filmshow.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/tvshow.css" th:href="@{/static/css/tvshow.css}">
+</body>
+</html>

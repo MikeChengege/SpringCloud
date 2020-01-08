@@ -8,16 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class VideoInfoService {
+public class TvInfoService {
     @Autowired
     ProductClientRibbon productClientRibbon;
-    public List<Video> getVideoInfo(){
-        return productClientRibbon.getVideoInf();
-    }
-    public List<Video> getMostseeInfoAll(){
-        return productClientRibbon.getVideoInf();
-    }
-    public List<Video> getRankBothAll(){
-        return productClientRibbon.getRankinfo();
+    public List<Video> getAllTv(int videoType){
+        return productClientRibbon.getAllTv(videoType);
     }
 }

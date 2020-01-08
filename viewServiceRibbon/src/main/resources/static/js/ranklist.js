@@ -5,7 +5,9 @@ $(function () {
         async:false,
         success:function (data) {
             data = JSON.stringify(data);
-            data = JSON.parse(data).reverse();//为了评论反向输出，始终保持最新评论在前
+            data = JSON.parse(data);
+            /*data = JSON.parse(data).reverse();*/
+            /*为了评论反向输出，始终保持最新评论在前*/
             var j=3;
             $.each(data,function (i,item) {
                 var html="<div class=\"thume\" style=\"margin-left: 40px;cursor:pointer\" onclick='intoPlayPage("+item.id+",\""+item.video_title+"\")'>"

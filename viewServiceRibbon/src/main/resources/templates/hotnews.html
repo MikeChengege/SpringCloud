@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:include="index"></div>
+<div id="right">
+<div id="rightTop">
+    <div class="bigLog">
+        <span class="glyphicon glyphicon-list-alt" style="font-size: 50px"></span>
+    </div>
+    <div class="bigTxt">
+        <span  style="font-size: 20px">新闻</span><br>
+        <span  style="font-size: 10px;color: #606060">聚焦国内外热点事件</span>
+    </div>
+</div>
+<div class="tvshowBottom" style="margin-left: 0px">
+    <div class="allThume">
+        <div class="mainTitle">
+            <span class="title">焦点新闻</span>
+        </div>
+        <div id="hotnews"></div>
+
+        <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+    </div>
+</div>
+<div class="tvshowBottom" style="margin-left: 0px">
+    <div class="allThume">
+        <div class="mainTitle">
+            <span class="title">体育/娱乐新闻</span>
+        </div>
+        <div id="sport">
+
+        </div>
+
+        <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+    </div>
+</div>
+<div class="tvshowBottom" style="margin-left: 0px">
+    <div class="allThume">
+        <div class="mainTitle">
+            <span class="title">财经新闻</span>
+        </div>
+        <div id="money">
+
+        </div>
+
+        <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+    </div>
+</div>
+</div>
+<script type="application/javascript">
+    $(function () {
+        $("#right").remove();
+        $("#index").removeAttr("style")
+        $("#rankingList").removeAttr("style")
+        $("#mostSee").removeAttr("style");
+        $("#newsshowLabel").attr("style","background-color:#eeeeee")
+    })
+</script>
+<script type="application/javascript" src="../static/js/newshow.js" th:src="@{/static/js/newshow.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/tvshow.css" th:href="@{/static/css/tvshow.css}">
+</body>
+</html>

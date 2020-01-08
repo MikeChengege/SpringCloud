@@ -48,6 +48,7 @@
 
             <a th:if="${session.sessionUser}" id="hadlogintext">
                  欢迎你：<span th:text="${session.sessionUser.username}"></span>
+                <input type="hidden" id="userid" th:value="${session.sessionUser.id}">
             </a>
             <a th:unless="${session.sessionUser}">
                     <a href="/templates/login.html"><span id="logintext">登录</span></a>
@@ -81,7 +82,7 @@
             </ul>
         </div>
         <div id="leftCanent">
-            <span style="margin-left: 30px" >MostvTV精选</span>
+            <span style="margin-left: 30px;margin-top: 10px" >MostvTV精选</span>
             <ul class="nav nav-pills nav-stacked allLabel">
                 <li role="presentation" id="tvshowLabel">
                     <a href="tvshow">

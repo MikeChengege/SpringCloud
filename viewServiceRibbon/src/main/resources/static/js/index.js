@@ -3,6 +3,9 @@ $(function () {
     $("#shouye").click(function () {
         window.location.href="/Mosttv/index";
     })
+    $("#hadlogintext").click(function () {
+        window.location.href="/Mosttv/login?name="+$("#userid").val();
+    })
     $(function () {
         $("#left").mouseover(function(){
             $("#left").attr("style","overflow:auto;overflow-y:auto;position: absolute;height: 100%;");

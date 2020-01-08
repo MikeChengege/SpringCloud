@@ -1,0 +1,140 @@
+body {
+    text-align:left;
+    margin:0 auto;
+    font-family:"宋体",Arial,Helvetica,sans-serif;
+    font-size:12px;
+    /*line-height:18px;*/
+    color:#4d4d4d;
+}
+#all{
+    width: auto;
+    height: 100%;
+    margin: 10px 2%;
+}
+#top{
+    width: 100%;
+    height: 10%;
+    background-color: #6c89b2;
+}
+#all #cantre{
+    width: 100%;
+    height: 70%;
+    margin-top: 10px;
+}#all #buttom{
+    width: 100%;
+    height: 10%;
+    margin-top: 200px;
+}
+#cantre_left{
+    width: 20%;
+    height:500px;
+    float:left;
+    background-color: #bdc3c7;
+}
+#all #cantre #cantre_left ul li{
+    font-size: 15px;
+    margin-top: 5px;
+}
+#all #cantre #cantre_right{
+    width: 75%;
+    height: 300px;
+    margin-left:5%;
+    float: left;
+    margin-top: 25px;
+}
+#all #cantre #cantre_right_top{
+    width: 100%;
+    height: 15%;
+}
+#all #cantre #cantre_right_cantre{
+    width: 100%;
+    height: 85%;
+}
+#all #cantre #cantre_right #cantre_right_top p{
+    font-size: 35px;
+    /*margin-top: 5px;*/
+    width: 100%;
+    height: 100%;
+    text-align:left;
+    line-height:130%;
+}
+.liactiove{
+    class : "active";
+}
+.filmitem{
+    width: 20%;
+    height: 50%;
+    float: left;
+    margin-left: 3%;
+}
+.filmitem_top{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    background-color: #00b7ee;
+}
+.filmitem_buttom{
+    width: 100%;
+    height: 20%;
+    background-color: #b92c28;
+}
+
+#personalinformation_left{
+    width: 100%;
+    height: 250px;
+    float: left;
+    margin-left:15%;
+    margin-top: 5%;
+    font-size: 15px;
+
+}
+
+#leftinfo{
+    width: 40%;
+    float: left;
+    padding-left: 5%;
+}
+#infpic{
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding-top: 20px;
+    text-align: center;
+}
+#personalinformation_right_top{
+    margin-top: 20%;
+    width: 60px;
+    height: 60px;
+    margin-left: 50%;
+}
+#personalinformation_right_buttom{
+    width: 100%;
+    height: 40%;
+    float: top;
+}
+#top_logo{
+    width:10%;
+    height: 100%;
+    margin-left: 10%;
+    float: left;
+}
+#top_middle{
+    width: 20%;
+    height: 100%;
+    float: left;
+    font-size: 30px;
+    line-height:180%;
+}
+#top_right{
+    width: 20%;
+    height: 100%;
+    float: right;
+    font-size: 30px;
+    line-height:180%;
+}
+.infright {
+    margin-left: 5%;
+    margin-top: 3%;
+    height: 15%;
+
+}

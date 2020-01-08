@@ -51,4 +51,36 @@ public class ProductController {
     public String rankingList() {
         return "rankingList";
     }
+    @RequestMapping("/Mosttv/tvshow")
+    public String tvshow() {
+        return "tvshow";
+    }
+    @RequestMapping("/Mosttv/filmshow")
+    public String filmshow() {
+        return "filmshow";
+    }
+    @RequestMapping("/Mosttv/musicshow")
+    public String musicshow() {
+        return "musicshow";
+    }
+    @RequestMapping("/Mosttv/hotnews")
+    public String hotnews() {
+        return "hotnews";
+    }
+    @RequestMapping("/Mosttv/sportshow")
+    public String sportshow() {
+        return "sportshow";
+    }
+    @RequestMapping("/Mosttv/gameshow")
+    public String gameshow() {
+        return "gameshow";
+    }
+    @RequestMapping("/Mosttv/login")
+    public String login(String name){
+        if(name==null||name.equals("null")||name.equals("")){
+            return "login";
+        }else {
+            return "userinformation";
+        }
+    }
 }

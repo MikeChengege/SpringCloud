@@ -25,13 +25,13 @@ public interface VideoInfoMapper {
     @Select("SELECT * from video_info where video_title like #{searcon}")
     @Results({
         @Result( id = true,property = "id",column = "id"),
-        @Result(property = "lvs",column = "id",javaType= VideoSub.class ,one=@One(select = "com.mosttv.springboot.mapper.videoSubMapper.getSubAll"))
+        @Result(property = "lvs",column = "id",javaType= VideoSub.class ,one=@One(select = "com.stu.springcloud.mapper.VideoSubMapper.getSubAll"))
     })
     List<Video> getSearchContent(String searcon);
     @Select("SELECT * from video_info order by video_hadvisit DESC limit 3")
     @Results({
         @Result( id = true,property = "id",column = "id"),
-        @Result(property = "lvs",column = "id",javaType= VideoSub.class ,one=@One(select = "com.mosttv.springboot.mapper.videoSubMapper.getSubAll"))
+        @Result(property = "lvs",column = "id",javaType= VideoSub.class ,one=@One(select = "com.stu.springcloud.mapper.VideoSubMapper.getSubAll"))
     })
     List<Video> getRankBothAll();
 
@@ -58,7 +58,7 @@ public interface VideoInfoMapper {
     @Select("SELECT * FROM video_info WHERE video_type = #{video_type} order by video_hadvisit DESC")
     @Results({
             @Result( id = true,property = "id",column = "id"),
-            @Result(property = "lvs",column = "id",javaType= VideoSub.class ,one=@One(select = "com.mosttv.springboot.mapper.videoSubMapper.getTv"))
+            @Result(property = "lvs",column = "id",javaType= VideoSub.class ,one=@One(select = "com.stu.springcloud.mapper.VideoSubMapper.getTv"))
     })
     List<Video> getVideoByType(int video_type);
 

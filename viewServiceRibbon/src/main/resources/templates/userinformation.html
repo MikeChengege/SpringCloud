@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>我的基本信息</title>
+    <script type="application/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
+    <script type="application/javascript" src="../static/js/userinfomation.js" th:src="@{/static/js/userinfomation.js}"></script>
+    <script type="application/javascript" src="../static/js/bootstrap.min.js" th:src="@{/static/js/bootstrap.min.js}"></script>
+    <script type="application/javascript" src="../static/js/clipboard.min.js" th:src="@{/static/js/clipboard.min.js}"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/bootstrap.css" th:href="@{/static/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/static/css/style.css}">
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/userinformation.css" th:href="@{/static/css/userinformation.css}">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/image/tubiao.ico" th:src="@{/static/image/tubiao.ico}" media="screen" />
+    <style type="text/css">
+        a{ color:#000; text-decoration:none;}
+        a:link{ color:#000; text-decoration:none;}
+        a:hover{color:#C03;text-decoration:none;}
+        a:active{ color:#000; text-decoration:none;}
+        a:visited{
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div id="all">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div id="top">
+            <div id="logoAndList">
+                <button class="btn btn-default" style="border: 0px; margin-left: 25px;">
+                    <span class="glyphicon glyphicon-list"></span>
+                </button>
+                <a href="index"><img th:src="@{/static/image/shouye.jpg}" title="MostTV 首页"/></a>
+            </div>
+            <div class="input-group input-group-sm" style="width: 30%; float: left;margin-top: 12px;">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"/>
+                        </button>
+                    </span>
+            </div>
+            <div id="topRight" style="float: left;font-size: 20px">
+                <a href="#"><span id="upload" class="glyphicon glyphicon-cloud-upload"data-toggle="tooltip" data-placement="left" title="上传"/></span></a>
+                <a href="#"><span id="sharehap" class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="right" title="分享"/></span></a>
+
+                <a th:if="${session.sessionUser}" id="hadlogintext">
+                    欢迎你：<span th:text="${session.sessionUser.username}"></span>
+                    <input type="hidden" id="userid" th:value="${session.sessionUser.id}">
+                </a>
+                <a th:unless="${session.sessionUser}">
+                    <a href="/templates/login.html"><span id="logintext">登录</span></a>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div id="below" >
+        <div id="left">
+            <div id="leftTop">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" id="mycollectionlist" style="margin-top: 20px;">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-bookmark" style="margin-left: 60px;"/> 我收藏的
+                        </a>
+                    </li>
+                    <li role="presentation" id="personalinformationlist">
+                        <a href="#"  >
+                            <span class="glyphicon glyphicon-user" style="margin-left: 60px;"/> 个人信息
+                        </a>
+                    </li>
+                    <li role="presentation" id="userhadsee">
+                        <a href="#"  >
+                            <span class="glyphicon glyphicon-record" style="margin-left: 60px;"/> 游览记录
+                        </a>
+                    </li>
+                    <li role="presentation" id="myvideolist">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-cloud-upload" style="margin-left: 60px"/> 我已上传视频
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;" />
+            <div id="leftAbout" style="margin: 0 5px 0 5px;height: 300px">
+                <span style="margin-left: 30px;font-size:18px " >MostvTV声明</span><br><br><br>
+                <span style="margin-top: 10px">
+                        本网站的内容、图文来自于网络,我们尊重他人的合法权益，如有内容侵犯您的合法权益，请及时与我们联系，我们将第一时间安排核实及删除!</li>
+                    </span>
+                <br/>
+                <span>法务联系:657281999@qq.com</span><br/>
+                <span style="margin-left: 20%">版权所有MOSTTV</span><br/>
+                <span style="margin-left: 20%">ICP证陕17003214</span>
+            </div>
+        </div>
+        <div id="right">
+            <div id="mycollection">
+                <div class="allThume">
+                    <div class="mainTitle">
+                        <span class="title">我的收藏</span>
+                    </div>
+                    <div id="collect"></div>
+                    <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+                </div>
+            </div>
+            <div id="personalinformation_left">
+                <div class="mainTitle" style="margin-bottom: 20px">
+                    <span class="title">我的信息</span>
+                </div>
+                <div id="leftinfo">
+                    <div class="infright">
+                        昵称：<input type="text" id="nickname"  value="<%=sessionValues%>" readonly="readonly" style="border: 0px;outline:none;cursor: pointer;">
+                        <span id="namespan" style="text-align: center; background-color: #3278b3" ></span>
+                    </div>
+                    <div class="infright">
+                        密码：
+                        <input type="text" id="password"  value="" readonly="readonly" style="border: 0px;outline:none;cursor: pointer;">
+                    </div>
+                    <div class="infright">
+                        邮箱：
+                        <input type="text" id="email"  value="" readonly="readonly" style="border: 0px;outline:none;cursor: pointer;">
+                    </div>
+                    <div class="infright">
+                        手机号码：
+                        <input type="text" id="telephone"  value="" readonly="readonly" style="border: 0px;outline:none;cursor: pointer;">
+                    </div>
+                    <div class="infright">
+                        您是第<span id="numbervip"></span>  位注册用户<br>
+                        注册日期：
+                        <input type="text" id="registerdate"  value="" readonly="readonly" style="border: 0px;outline:none;cursor: pointer;">
+                    </div>
+                    <div class="infright">
+                        <button type="button"  id="btnnickname" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">修改信息</button>
+                        <button type="button" style="display: none;margin-left:30%"  id="subinfo" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal">确认信息</button>
+                        <button type="button" style="display: none;margin-left:30%"  id="cancelinfo" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal">取消修改</button>
+                    </div>
+                </div>
+                <div id="imglist"  style="width: 500px;display: none;">
+                    <img onclick="changePic('tou1')" id="tou1" src="../../images/touxiang/tou1.jpg" class="img-thumbnail" style="width: 150px;height:150px;float: left;margin-left: 10px">
+                    <img onclick="changePic('tou2')" id="tou2" src="../../images/touxiang/tou2.jpg" class="img-thumbnail" style="width: 150px;height:150px;float: left;margin-left: 10px">
+                    <img onclick="changePic('tou3')" id="tou3" src="../../images/touxiang/tou3.jpg" class="img-thumbnail" style="width: 150px;height:150px;float: left;margin-left: 10px">
+                    <img onclick="changePic('tou4')" id="tou4" src="../../images/touxiang/tou4.jpg" class="img-thumbnail" style="width: 150px;height:150px;float: left;margin-left: 10px">
+                </div>
+                <div id="infpic">
+                    <img src="../../images/touxiang/tux.jpg" class="img-thumbnail" style="width: 150px;height:150px"><br><br>
+                    <button id="changePic" type="button" class="btn btn-primary btn-sm" style="float: bottom">修改头像</button>
+                    <button id="changePics" type="button" class="btn btn-primary btn-sm" style="float: bottom;display: none">确认修改</button>
+                </div>
+            </div>
+            <div id="userhadseediv">
+                <div class="allThume">
+                    <div class="mainTitle">
+                        <span class="title">我看过的</span>
+                    </div>
+                    <div id="userhadseedivs"></div>
+                </div>
+
+
+            </div>
+            <div id="myvideo">
+                <div class="allThume">
+                    <div class="mainTitle">
+                        <span class="title">我上传的</span>
+                    </div>
+                    <div id="userupload">
+                    </div>
+                    <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;margin-top:260px" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
