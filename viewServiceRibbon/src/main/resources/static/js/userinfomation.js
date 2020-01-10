@@ -27,7 +27,7 @@ $(function () {
     })
 
     $("#sharehap").click(function () {
-        var content = "http://106.13.77.233:8080/MostTV";
+        var content = "http://127.0.0.1:8012/Mosttv/index";
         var clipboard = new Clipboard('#sharehap', {
             text: function() {
                 return content;
@@ -115,7 +115,7 @@ $(function () {
           success:function (data) {
               if(data.msg=="success"){
                   alert("修改成功")
-                  window.location.href="/MostTV/Cancellation";
+                  window.location.href="/Mosttv/Cancellation";
               }else {
                   alert(data.msg);
               }
@@ -178,7 +178,7 @@ $(function () {
         })
     })
     if($("#numbervip").text()==""){
-        window.location.href="/MostTV/login";
+        window.location.href="/Mosttv/index";
     }
     $.ajax({
         type:"POST",
@@ -319,7 +319,7 @@ function updateVideoTitle(id,a) {
         }
         $.ajax({
             type:"POST",
-            url:"/updateVideoTitle",
+            url:"/updateVideo",
             data:data,
             success:function (data) {
                 if(data.msg=="success"){
@@ -340,7 +340,7 @@ function deleteUploadVideo(id) {
     if(d==true){
         $.ajax({
             type:"post",
-            url:"/deleteUploadVideo",
+            url:"/deleteVideo",
             data:{"id":id},
             success:function (data) {
                 if(data.msg=="success"){

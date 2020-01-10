@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:include="index"></div>
+<div id="uploadpage">
+    <input type="hidden" id="updatess" th:value="${msg}">
+    <div id="loadtop" style="text-align: center;">
+        <img id="upimgt" disabled="true" th:src="@{/static/image/OK.jpg}" style="width: 100px;height: 100px" class="img-circle"><br>
+        <img id="upimgf" disabled="true" th:src="@{/static/image/fail.jpg}" style="width: 100px;height: 100px" class="img-circle"><br>
+        <span id="spup" class="text-primary"></span>
+    </div>
+    <div id="loadbottom">
+        <span >帮助和建议</span><br><br>
+        <span style="font-size: 12px">一旦将您的视频提交到MostTV，即表示您同意遵守MostTV的<a href="" style="color: #00b7ee">服务条款</a>和<a href="" style="color: #00b7ee">社区准则</a> 。 </span><br>
+        <span style="font-size: 12px">请确保不要侵犯他人的版权或隐私权,以及色情、反动等违法视频<a href="http://v.qq.com/help/help_agreement.html" style="color: #00b7ee">了解详情</a></span><br>
+        <span style="font-size: 12px">上传说明| 问题排查 |从手机上传 </span>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#right").remove();
+        $("#left").remove();
+        $("#upimgt").hide();
+        $("#upimgf").hide();
+        $("#searchdiv").hide();
+        if($("#updatess").val()=="success"){
+            $("#upimgt").show();
+            $("#spup").html("上传成功");
+        }else {
+            $("#upimgf").show();
+            $("#spup").html("上传失败");
+        }
+    })
+</script>
+<script type="application/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/upload.css" th:href="@{/static/css/upload.css}">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<div th:include="index"></div>
+<div id="right" style="margin-top: 80px;left:8%;">
+    <div id="searchcont"></div>
+</div>
+<div id="nodata" style="text-align: center;margin-top: 80px">
+    <img class="img-circle" th:src="@{/static/image/fail.jpg}" width="200px" height="200px"><br>
+    <span class="text-warning">Nothing Searched</span>
+    <input type="hidden" id="searchtent" th:value="${searchtent}">
+</div>
+<script>
+    $(function () {
+        $("#right").remove();
+        $("#left").remove();
+        $("#searchinp").val( $("#searchtent").val());
+    })
+</script>
+<script type="application/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
+<script type="application/javascript" src="../static/js/search.js" th:src="@{/static/js/search.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/tvshow.css" th:href="@{/static/css/tvshow.css}">
+</body>
+</html>

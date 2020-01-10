@@ -1,21 +1,14 @@
 package com.stu.springcloud.controller;
 
-import cn.hutool.json.JSONObject;
 import com.stu.springcloud.mapper.UserInfoMapper;
 import com.stu.springcloud.model.User;
 import com.stu.springcloud.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.text.SimpleDateFormat;
-import java.util.*;
 
 /**
  * Created by mikechen on 2018/9/21.
@@ -26,17 +19,29 @@ public class UserInfoController {
     UserInfoMapper userinfomapper;
     @Autowired
     UserService userService;
-//    @Autowired
-//    VideoInfoMapper videoinfomapper;
-//    @Autowired
-//    loginAndRegisterService loginandregisterservice;
     @RequestMapping("/Verification")
     @ResponseBody
     public User Verification(String username){
         User us =  userService.getUser(username);
         return us;
     }
+    @RequestMapping("/getUserInfoById")
+    @ResponseBody
+    public User getUserInfoById(int uid){
+        User us =  userService.getById(uid);
+        return us;
+    }
+    @RequestMapping("/updateUser")
+    @ResponseBody
+    public void updateUser(@RequestBody User user){
+        userService.updateUser(user);
+    }
 
+    @RequestMapping("/setUser")
+    @ResponseBody
+    public void setUser(@RequestBody User us){
+        userService.setUser(us);
+    }
 //    @RequestMapping("/loginVerification/Verification")
 //    @ResponseBody
 //    public JSONObject loginVerification(String username){
@@ -121,26 +126,7 @@ public class UserInfoController {
 //          map.put("total", pagev.getTotal());
 //          return map;
 //    }
-//    @RequestMapping("/updateUserInfo")
-//    @ResponseBody
-//    public JSONObject updateUserInfo(User us){
-//        JSONObject json = new JSONObject();
-//        try{
-//            User u = userinfomapper.getById(us.getId());
-//            if(u!=null){
-//                if(us.getPhoto()==null){
-//                    us.setPhoto(u.getPhoto());
-//                }
-//                userinfomapper.updateUser(us);
-//                json.put("msg","success");
-//            }else {
-//                json.put("msg","无此用户");
-//            }
-//        }catch (Exception e){
-//            json.put("msg",e);
-//        }
-//        return json;
-//    }
+
 //    @RequestMapping("/updateUserPhoto")
 //    @ResponseBody
 //    public JSONObject updateUserPhoto(User us){

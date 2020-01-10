@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div th:include="index"></div>
+<div id="uploadpage">
+    <div id="loadtop">
+        <a href="#" id="loadbtns">
+            <img th:src="@{/static/image/upload.PNG}" style="margin-left: 35%"><br><br>
+            <span style="margin-left: 38%;font-size: 18px">点击开始上传 </span>
+        </a>
+    </div>
+
+    <div id="loadbottom">
+        <span >帮助和建议</span><br><br>
+        <span style="font-size: 12px">一旦将您的视频提交到MostTV，即表示您同意遵守MostTV的<a href="" style="color: #00b7ee">服务条款</a>和<a href="" style="color: #00b7ee">社区准则</a> 。 </span><br>
+        <span style="font-size: 12px">请确保不要侵犯他人的版权或隐私权,以及色情、反动等违法视频<a href="http://v.qq.com/help/help_agreement.html" style="color: #00b7ee">了解详情</a></span><br>
+        <span style="font-size: 12px">上传说明| 问题排查 |从手机上传 </span>
+    </div>
+    <a th:if="${session.sessionUser}">
+        <input type="hidden" id="userid" th:value="${session.sessionUser.id}">
+    </a>
+    <div id="rightSecond" style="visibility:hidden;height: 500px">
+        <div class="easyui-panel" title="上传视频" style="width:100%;max-width:600px;padding:30px 60px;">
+            <div style="margin-bottom:10px">
+                <input class="easyui-textbox" id="videotit" label="视频标题:" labelPosition="top" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input class="easyui-textbox" id="videomessage" style="width:100%;height:80px"  label="视频描述:" labelPosition="top"data-options="multiline:true">
+            </div>
+
+
+            <form action="/uploadvideo" method="post" enctype="multipart/form-data">
+                <div style="margin-bottom:10px">
+                    <input class="easyui-filebox" id="spic" name="subpic" label="选择视频图片:" accept="image/*"  labelPosition="top" data-options="prompt:'Choose a file...'" style="width:100%">
+                </div>
+                <div style="margin-bottom:10px">
+                    <input class="easyui-filebox" id="svid" name="subvideo" label="选择视频或输入地址:" accept="video/*" labelPosition="top" data-options="prompt:'Choose a file...支持MPEG4、WebM、Ogg'" style="width:100%">
+                    <input  class="easyui-textbox" id="svida" name="videoadd" data-options="prompt:'超过2G请输入地址,支持百度云盘和迅雷磁力链接'" value=""style="width:100%"/>
+                    <input  type="hidden" name="vid" value=""/>
+                </div>
+                <input type="submit" id="updatevidandpic" style="display: none">
+            </form>
+            <div style="margin-bottom:20px">
+                <div class="btn-group" data-toggle="buttons" >
+                    <label  class="btn btn-default active">
+                        <input type="radio" > 美剧
+                    </label>
+                    <label  class="btn btn-default">
+                        <input type="radio" > 电影
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" > 学习
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" > 新闻
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" > 体育
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" > 游戏
+                    </label>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="easyui-linkbutton" id="uploadvidinfo" style="width:100%">上传</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/upload.css" th:href="@{/static/css/upload.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/tvshow.css" th:href="@{/static/css/tvshow.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/easyui/easyui.css" th:href="@{/static/css/easyui/easyui.css}">
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/easyui/icon.css" th:href="@{/static/css/easyui/icon.css}">
+<script type="application/javascript" src="../static/js/musicshow/jquery-2.1.1.min.js" th:src="@{/static/js/musicshow/jquery-2.1.1.min.js}"></script>
+<script type="application/javascript" src="../static/js/easyui/jquery.easyui.min.js" th:src="@{/static/js/easyui/jquery.easyui.min.js}"></script>
+<script type="application/javascript" src="../static/js/easyui/jquery.edatagrid.js" th:src="@{/static/js/easyui/jquery.edatagrid.js}"></script>
+<script type="application/javascript">
+    $(function () {
+        $("#right").remove();
+        $("#left").remove();
+        $("#loadbtns").click(function () {
+            $("#loadtop").hide();
+            $("#loadbottom").hide();
+            $("#rightSecond").attr("style","visiblity:visible");
+        })
+    })
+</script>
+<script type="application/javascript" src="../static/js/uploadvideo.js" th:src="@{/static/js/uploadvideo.js}"></script>
+
+</body>
+</html>

@@ -1,10 +1,10 @@
 
 $(function () {
+    $("#upload").click(function () {
+        window.location.href="/Mosttv/upload?name="+ $("#username").val();
+    })
     $("#shouye").click(function () {
         window.location.href="/Mosttv/index";
-    })
-    $("#hadlogintext").click(function () {
-        window.location.href="/Mosttv/login?name="+$("#userid").val();
     })
     $(function () {
         $("#left").mouseover(function(){

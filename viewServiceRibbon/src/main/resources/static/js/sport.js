@@ -113,5 +113,7 @@ $(function () {
     }
 })
 function intoPlayPage( id,name) {
+    name = name.replace("]","");
+    name = name.replace("[","");
     window.location.href="playbackpage?name="+name+"&id="+id;
 }

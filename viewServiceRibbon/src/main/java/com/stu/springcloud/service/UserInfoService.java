@@ -32,4 +32,24 @@ public class UserInfoService {
         }
         return  jsonObject;
     }
+    public User getUserInfoByName(String username){
+        return productClientRibbon.Verification(username);
+    }
+    public User getUserInfoById(int id){
+        return productClientRibbon.getUserInfoById(id);
+    }
+    public String findHasUserName(String username){
+        User us =productClientRibbon.Verification(username);
+        if(us==null){
+            return "N";
+        }else {
+            return us.getUsername();
+        }
+    }
+    public void updateUser(User us){
+        productClientRibbon.updateUser(us);
+    }
+    public void setUser(User us){
+        productClientRibbon.setUser(us);
+    }
 }

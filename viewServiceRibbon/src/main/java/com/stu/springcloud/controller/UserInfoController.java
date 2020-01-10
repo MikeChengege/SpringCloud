@@ -28,52 +28,83 @@ public class UserInfoController {
     @RequestMapping("/Verification")
     @ResponseBody
     public JSONObject Verification(User user, HttpServletRequest request){
-//        HttpSession session = request.getSession();
         return userInfoService.Verification(user,request);
     }
-
-//    @RequestMapping("/loginVerification/Verification")
-//    @ResponseBody
-//    public JSONObject loginVerification(String username){
-//        String name = loginandregisterservice.findHasUserName(username);
-//        JSONObject jsonObject = new JSONObject();
-//        if(name.equals("N")){
-//            jsonObject.put("msg", "success");
-//        }
-//        else{
-//            jsonObject.put("msg", "error");
-//        }
-//        return jsonObject;
-//    }
+    //    个人信息页面基本信息获取
+    @RequestMapping("/getBaseinfomation")
+    @ResponseBody
+    public User getBaseinfomation(String username){
+        User us  = userInfoService.getUserInfoByName(username);
+        return us;
+    }
+    @RequestMapping("/loginVerification/Verification")
+    @ResponseBody
+    public JSONObject loginVerification(String username){
+        String name = userInfoService.findHasUserName(username);
+        JSONObject jsonObject = new JSONObject();
+        if(name.equals("N")){
+            jsonObject.put("msg", "success");
+        }
+        else{
+            jsonObject.put("msg", "error");
+        }
+        return jsonObject;
+    }
+    @RequestMapping("/updateUserInfo")
+    @ResponseBody
+    public JSONObject updateUserInfo(User us){
+        JSONObject json = new JSONObject();
+        try{
+            User u = userInfoService.getUserInfoById(us.getId());
+            if(u!=null){
+                if(us.getPhoto()==null){
+                    us.setPhoto(u.getPhoto());
+                }
+                userInfoService.updateUser(us);
+                json.put("msg","success");
+            }else {
+                json.put("msg","无此用户");
+            }
+        }catch (Exception e){
+            json.put("msg",e);
+        }
+        return json;
+    }
+    @RequestMapping("/updateUserPhoto")
+    @ResponseBody
+    public JSONObject updateUserPhoto(User us){
+        JSONObject json = new JSONObject();
+        try{
+            userInfoService.updateUser(us);
+            json.put("msg","success");
+        }catch (Exception e){
+            json.put("msg",e);
+        }
+        return json;
+    }
 //
 ////    插入数据库
-//    @RequestMapping("/confirmVerification")
-//    @ResponseBody
-//    public JSONObject rigistConfVerification(User user){
-//        JSONObject jsonObject = new JSONObject();
-//        User us = userinfomapper.get(user.getUsername());
-//        if (us!=null){
-//            jsonObject.put("msg", "error");
-//            return jsonObject;
-//        }else {
-//            userinfomapper.setUser(user);
-//        }
-//        String getPs  = userinfomapper.getPs(user.getUsername());
-//        if(getPs!=null){
-//            jsonObject.put("msg", "success");
-//        }
-//        else{
-//            jsonObject.put("msg", "error");
-//        }
-//        return jsonObject;
-//    }
-//    //    个人信息页面基本信息获取
-//    @RequestMapping("/getBaseinfomation")
-//    @ResponseBody
-//    public User getBaseinfomation(String username){
-//        User us  = userinfomapper.get(username);
-//        return us;
-//    }
+    @RequestMapping("/confirmVerification")
+    @ResponseBody
+    public JSONObject rigistConfVerification(User user){
+        JSONObject jsonObject = new JSONObject();
+        User us = userInfoService.getUserInfoByName(user.getUsername());
+        if (us!=null){
+            jsonObject.put("msg", "error");
+            return jsonObject;
+        }else {
+            userInfoService.setUser(user);
+        }
+        String getPs  = userInfoService.getUserInfoByName(user.getUsername()).getPassword();
+        if(getPs!=null){
+            jsonObject.put("msg", "success");
+        }
+        else{
+            jsonObject.put("msg", "error");
+        }
+        return jsonObject;
+    }
+
 //    @RequestMapping("/datagridjson")
 //    @ResponseBody
 //    public Map<String, Object> datagridjson(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
@@ -116,38 +147,8 @@ public class UserInfoController {
 //          map.put("total", pagev.getTotal());
 //          return map;
 //    }
-//    @RequestMapping("/updateUserInfo")
-//    @ResponseBody
-//    public JSONObject updateUserInfo(User us){
-//        JSONObject json = new JSONObject();
-//        try{
-//            User u = userinfomapper.getById(us.getId());
-//            if(u!=null){
-//                if(us.getPhoto()==null){
-//                    us.setPhoto(u.getPhoto());
-//                }
-//                userinfomapper.updateUser(us);
-//                json.put("msg","success");
-//            }else {
-//                json.put("msg","无此用户");
-//            }
-//        }catch (Exception e){
-//            json.put("msg",e);
-//        }
-//        return json;
-//    }
-//    @RequestMapping("/updateUserPhoto")
-//    @ResponseBody
-//    public JSONObject updateUserPhoto(User us){
-//        JSONObject json = new JSONObject();
-//        try{
-//            userinfomapper.updateUserPhoto(us);
-//            json.put("msg","success");
-//        }catch (Exception e){
-//            json.put("msg",e);
-//        }
-//        return json;
-//    }
+
+
 //    @RequestMapping("/destroyUser")
 //    @ResponseBody
 //    public JSONObject destroyUser(int id){

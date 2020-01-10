@@ -27,11 +27,11 @@ $(function(){
         return false;
     });
     $("#btn_register").click(function(){
-        window.location.href="/MostTV/register";
+        window.location.href="/Mosttv/register";
         return false;
     });
     $("#btn_back").click(function(){
-        window.location.href="/MostTV/index";
+        window.location.href="/Mosttv/index";
         return false;
     });
 });

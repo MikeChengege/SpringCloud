@@ -1,11 +1,12 @@
 package com.stu.springcloud.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.stu.springcloud.modle.Product;
 import com.stu.springcloud.modle.User;
+import com.stu.springcloud.modle.Video;
 import com.stu.springcloud.service.ProductService;
+import com.stu.springcloud.service.VideoInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -23,7 +24,8 @@ import javax.servlet.http.HttpSession;
 public class ProductController {
     @Autowired
     ProductService productService;
-
+    @Autowired
+    VideoInfoService videoInfoService;
     @Value("${version}")
     String version;
     @RequestMapping("/products")
@@ -75,12 +77,61 @@ public class ProductController {
     public String gameshow() {
         return "gameshow";
     }
-    @RequestMapping("/Mosttv/login")
-    public String login(String name){
-        if(name==null||name.equals("null")||name.equals("")){
-            return "login";
+    @RequestMapping("/Mosttv/userinformation")
+    public String userinformation(HttpSession session) {
+        if(session.getAttribute("useInfo")!=null){
+            User u = (User)session.getAttribute("useInfo");
+            session.setAttribute("sessionUser",u);
         }else {
-            return "userinformation";
+            session.setAttribute("sessionUser",null);
         }
+        return "userinformation";
+    }
+//    注销
+    @RequestMapping("/Mosttv/Cancellation")
+    public String Cancellation(HttpServletRequest request){
+        request.getSession().invalidate();
+        return "index";
+    }
+    @RequestMapping("/Mosttv/playbackpage")
+    public String playbackpage(String name, int id,HttpSession session){
+        if(session.getAttribute("useInfo")!=null){
+            User u = (User)session.getAttribute("useInfo");
+            session.setAttribute("sessionUser",u);
+        }else {
+            session.setAttribute("sessionUser",null);
+        }
+        if(id>=0){
+            Video video =  videoInfoService.getVideoById(id);
+            if(video.getVideo_hadvisit()>=0){
+                int oldVis=video.getVideo_hadvisit();
+                video.setVideo_hadvisit(++oldVis);
+                try{
+                    videoInfoService.updateHadVis(video);
+                }catch (Exception e){
+                    System.out.println(e);
+                }
+            }
+        }
+
+        return "playbackpage";
+    }
+    @RequestMapping("/Mosttv/login")
+    public String login(){
+        return "login";
+    }
+    @RequestMapping("/Mosttv/upload")
+    public String upload(String name){
+        return "upload";
+    }
+
+    @RequestMapping("/Mosttv/searchpage")
+    public String searchVideo(String secont, Model m){
+        m.addAttribute("searchtent",secont);
+        return "searchpage";
+    }
+    @RequestMapping("/Mosttv/register")
+    public String register(){
+        return "register";
     }
 }

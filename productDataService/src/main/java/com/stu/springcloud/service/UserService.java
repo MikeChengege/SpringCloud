@@ -13,4 +13,15 @@ public class UserService {
         User us  = userInfoMapper.get(username);
         return  us;
     }
+    public User getById(int id){
+        User us = userInfoMapper.getById(id);
+        return  us;
+    }
+    public void updateUser(User us){
+        userInfoMapper.updateUser(us);
+    }
+    public void setUser(User us){
+        userInfoMapper.setUser(us);
+    }
+
 }
