@@ -197,4 +197,9 @@ public class ProductClientFeignHystrix  implements ProductClientRibbon{
     public void setUser(User us) {
 
     }
+
+    @Override
+    public Manager getMangByName(String name) {
+        return null;
+    }
 }

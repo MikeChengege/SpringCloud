@@ -96,4 +96,7 @@ public interface ProductClientRibbon {
     @GetMapping("/setUser")
     public void setUser(@RequestBody User us);
 
+    @GetMapping("/getMangByName")
+    public Manager getMangByName(@RequestParam("name") String name);
+
 }

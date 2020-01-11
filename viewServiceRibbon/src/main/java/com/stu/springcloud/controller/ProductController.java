@@ -134,4 +134,14 @@ public class ProductController {
     public String register(){
         return "register";
     }
+
+    @RequestMapping("/Mosttv/maglogin")
+    public String maglogin(){
+        return "maglogin";
+    }
+
+    @RequestMapping("/Mosttv/magindex")
+    public String magindex(){
+        return "magindex";
+    }
 }

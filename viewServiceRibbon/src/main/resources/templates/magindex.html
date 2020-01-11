@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>谋思特视频</title>
+</head>
+<body>
+<div id="all">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div id="top">
+            <div id="logoAndList">
+                <button class="btn btn-default" style="border: 0px; margin-left: 25px;">
+                    <span class="glyphicon glyphicon-list"></span>
+                </button>
+                <a href="magindex"><img src="../../images/shouye.jpg" title="MostTV 首页"/></a>
+            </div>
+            <div id="topRight" style="float: right;font-size: 15px">
+
+                <c:if test="${ sessionScope.magusername!=null}">
+                    <span  id="managename"  title="点击进入个人界面">欢迎你管理员：${ sessionScope.magusername}</span>
+                </c:if>
+                <c:if test="${ sessionScope.magid!=null}">
+                    <input type="hidden" id="magid" value=${ sessionScope.magid}>
+                </c:if>
+                <c:if test="${sessionScope.magusername == null}">
+                    <%--<span class="glyphicon glyphicon-log-in"/>--%>
+                    <c:redirect url="/MostTV/maglogin"/>
+                    <span style="color: #00b7ee"><a href="/MostTV/maglogin?name=<%=sessionValues%>" >非法进入，请登录</a></span>
+                </c:if>
+            </div>
+        </div>
+    </nav>
+
+    <div id="below" >
+        <div id="left">
+            <div id="leftTop">
+                <ul class="nav nav-pills nav-stacked"  >
+                    <li role="presentation" style="margin-top: 20px">
+                        <a href="magindex" id="index" style="color: red">
+                            <span class="glyphicon glyphicon-adjust" style="margin-left: 14%;"/> 资源调整审核
+                        </a>
+                    </li>
+                    <li role="presentation">
+
+                        <a href="examinevideo" id="mostSee" >
+                            <span  class="glyphicon glyphicon-edit" style="margin-left: 14%;"/> 视频详细管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="examineuser" id="examineuser">
+                            <span class="glyphicon glyphicon-user" style="margin-left: 14%"/> 用户信息管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="examinecomm" id="rankingList">
+                            <span class="glyphicon glyphicon-comment" style="margin-left: 14%"/> 用户评论管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="maguseradv" id="maguseradv">
+                            <span class="glyphicon glyphicon-bullhorn" style="margin-left: 14%;"/> 用户建议
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/MostTV/magquit" id="backLogin">
+                            <span class="glyphicon glyphicon-log-out" style="margin-left: 14%"/> 退出登录
+                        </a>
+                    </li>
+                    <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;" />
+                </ul>
+            </div><br/>
+            <div id="leftAbout" style="margin: 0 10px 0 10px;height: 300px;width: 180px">
+                <span style="margin-left: 30px;font-size:18px">MostvTV声明</span><br><br>
+                <span style="margin-top: 10px">
+                        &nbsp; &nbsp;本网站的内容、图文来自于网络,我们尊重他人的合法权益,如有内容侵犯您的合法权益,请及时与我们联系,我们将第一时间安排核实及删除!</li>
+                    </span>
+                <br/>
+                <span>法务联系:657281999@qq.com</span><br/>
+                <span style="margin-left: 20%">版权所有MOSTTV</span><br/>
+                <span style="margin-left: 20%">ICP证陕17003214</span>
+            </div>
+        </div>
+
+        <div id="right">
+            <div id="rightFirst">
+                <table id="dg" title="视频调整审核" style="width:95%;height:450px"
+                       toolbar="#toolbar" pagination="true" idField="id"
+                       rownumbers="true" fitColumns="true" singleSelect="true">
+                    <thead>
+                    <tr>
+                        <%--<th field="ck" checkbox="true"></th>--%>
+                        <th field="video_type" width="50" editor="{type:'numberbox'}">视频类型</th>
+                        <th field="video_title" width="50" editor="text">视频title</th>
+                        <th field="video_descript" width="50" editor="text">视频描述</th>
+                        <th field="video_address" width="50" editor="text">视频地址</th>
+                        <th field="video_pic" width="50" editor="text">图片地址</th>
+                        <th field="video_exam" width="50" editor="{type:'numberbox'}">审核状态</th>
+                        <th field="id" width="50">视频编号</th>
+                        <th field="video_peop" width="50">上传用户</th>
+                        <th field="video_comment" width="50">评论数</th>
+                        <th field="video_download" width="50">下载数</th>
+                    </tr>
+                    </thead>
+                </table>
+                <div id="toolbar">
+                    <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" id="addrow">新建</a>
+                    <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:$('#dg').edatagrid('destroyRow')">删除</a>
+                    <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true"  onclick="javascript:$('#dg').edatagrid('saveRow')">保存</a>
+                    <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#dg').edatagrid('cancelRow')">取消</a>
+                    <a href="#" class="easyui-linkbutton" iconCls="icon-tip" plain="true" onclick="javascript:$('#dg').edatagrid('examsRow')">审查</a>
+                </div>
+            </div>
+            <div id="rightSecond" style="visibility: hidden">
+                <div class="easyui-panel" title="新增视频" style="width:100%;max-width:600px;padding:30px 60px;">
+                    <div style="margin-bottom:10px">
+                        <input class="easyui-textbox" id="videotit" label="视频标题:" labelPosition="top" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input class="easyui-textbox" id="videomessage" style="width:100%;height:80px"  label="视频描述:" labelPosition="top"data-options="multiline:true">
+                    </div>
+
+
+                    <form action="/maguploadvideo" method="post" enctype="multipart/form-data">
+                        <div style="margin-bottom:10px">
+                            <input class="easyui-filebox" id="spic" name="subpic" label="选择视频图片:"  accept="image/*"  labelPosition="top" data-options="prompt:'Choose a file...'" style="width:100%">
+                        </div>
+                        <div style="margin-bottom:10px">
+                            <input class="easyui-filebox" id="svid" name="subvideo" label="选择视频或输入地址:"  accept="video/*"  labelPosition="top" data-options="prompt:'Choose a file...'" style="width:100%">
+                            <input  class="easyui-textbox"  id="svida" name="videoadd" data-options="prompt:'超过2G请输入地址,支持百度云盘和迅雷磁力链接'" value=""style="width:100%"/>
+                            <input  type="hidden" name="vid" value=""/>
+                        </div>
+                        <input type="submit" id="updatevidandpic" style="display: none">
+                    </form>
+                    <div style="margin-bottom:20px">
+                        <div class="btn-group" data-toggle="buttons" >
+                            <label  class="btn btn-default active">
+                                <input type="radio" > 美剧
+                            </label>
+                            <label  class="btn btn-default">
+                                <input type="radio" > 电影
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" > 学习
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" > 新闻
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" > 体育
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" > 游戏
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="easyui-linkbutton"  id="uploadvidinfo" style="width:100%;">上传</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

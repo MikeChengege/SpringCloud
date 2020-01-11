@@ -2,7 +2,9 @@ package com.stu.springcloud.controller;
 
 
 
+import com.stu.springcloud.model.Manager;
 import com.stu.springcloud.model.UserAdv;
+import com.stu.springcloud.service.MaginfoService;
 import com.stu.springcloud.service.UserAdvService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,27 +22,15 @@ import java.util.Date;
 public class MagController {
     @Autowired
     UserAdvService userAdvService;
-//    @RequestMapping("/magVerification")
-//    @ResponseBody
-//    public JSONObject MagVerification(Manager manager, HttpServletRequest request, HttpServletResponse response){
-//        String newpass =manager.getPassword();
-//        Manager mg  = maginfomapper.get(manager.getUsername());
-//        JSONObject jsonObject = new JSONObject();
-//        HttpSession session = request.getSession();
-//        if(mg!=null){
-//            String rightpass =mg.getPassword();
-//            if(newpass.equals(rightpass)){
-//                jsonObject.put("msg", "success");
-//                session.setAttribute("magusername",mg.getUsername());//把值存入session
-//                session.setAttribute("magid",mg.getId());//把值存入session
-//            }else {
-//                jsonObject.put("msg", "error");
-//            }
-//        } else {
-//            jsonObject.put("msg", "NoUser");
-//        }
-//        return jsonObject;
-//    }
+
+    @Autowired
+    MaginfoService maginfoService;
+
+    @RequestMapping("/getMangByName")
+    @ResponseBody
+    public Manager getMangByName(String name){
+        return maginfoService.getMangByName(name);
+    }
     @RequestMapping("/submitAdvice")
     @ResponseBody
     public void submitAdvice(UserAdv uadv){
