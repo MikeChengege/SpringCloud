@@ -2,8 +2,12 @@ package com.stu.springcloud.controller;
 
 
 import cn.hutool.json.JSONObject;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.stu.springcloud.modle.User;
+import com.stu.springcloud.modle.Video;
 import com.stu.springcloud.service.UserInfoService;
+import com.stu.springcloud.service.VideoInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Controller;
@@ -25,6 +29,8 @@ import java.util.*;
 public class UserInfoController {
     @Autowired
     UserInfoService userInfoService;
+    @Autowired
+    VideoInfoService videoInfoService;
     @RequestMapping("/Verification")
     @ResponseBody
     public JSONObject Verification(User user, HttpServletRequest request){
@@ -105,85 +111,85 @@ public class UserInfoController {
         return jsonObject;
     }
 
-//    @RequestMapping("/datagridjson")
-//    @ResponseBody
-//    public Map<String, Object> datagridjson(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
-//          int start = (page-1)*rows+1;
-//          int size = rows;
-//          PageHelper.startPage(start,size,"id desc");
-//          List<Video> lv = videoinfomapper.getAll();
-//          PageInfo<Video> pagev = new PageInfo<>(lv);
-//          List<Video> lvs = new ArrayList<>();
-//          int i=0;
-//            for (Video vi:lv) {
-//                i++;
-//                if(i>=start&&i<start+size){
-//                    lvs.add(vi);
-//                }
-//            }
-//          Map<String, Object> map = new HashMap<>();
-//          map.put("rows", lvs);
-//          map.put("total", pagev.getTotal());
-//          return map;
-//    }
-//    @RequestMapping("/getuserinfomation")
-//    @ResponseBody
-//    public Map<String, Object> getUserInfomation(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
-//          int size = rows;
-//          int start = (page-1)*rows+1;
-//          PageHelper.startPage(start,size,"id desc");
-//          List<User> lus = userinfomapper.getAllUser();
-//          PageInfo<User> pagev = new PageInfo<>(lus);
-//          List<User> lvs = new ArrayList<>();
-//          int i=0;
-//            for (User vi:lus) {
-//                i++;
-//                if(i>=start&&i<start+size){
-//                    lvs.add(vi);
-//                }
-//            }
-//          Map<String, Object> map = new HashMap<>();
-//          map.put("rows", lvs);
-//          map.put("total", pagev.getTotal());
-//          return map;
-//    }
+    @RequestMapping("/datagridjson")
+    @ResponseBody
+    public Map<String, Object> datagridjson(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
+          int start = (page-1)*rows+1;
+          int size = rows;
+          PageHelper.startPage(start,size,"id desc");
+          List<Video> lv = videoInfoService.getVideoInfo();
+          PageInfo<Video> pagev = new PageInfo<>(lv);
+          List<Video> lvs = new ArrayList<>();
+          int i=0;
+            for (Video vi:lv) {
+                i++;
+                if(i>=start&&i<start+size){
+                    lvs.add(vi);
+                }
+            }
+          Map<String, Object> map = new HashMap<>();
+          map.put("rows", lvs);
+          map.put("total", pagev.getTotal());
+          return map;
+    }
+    @RequestMapping("/getuserinfomation")
+    @ResponseBody
+    public Map<String, Object> getUserInfomation(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
+          int size = rows;
+          int start = (page-1)*rows+1;
+          PageHelper.startPage(start,size,"id desc");
+          List<User> lus = userInfoService.getAllUser();
+          PageInfo<User> pagev = new PageInfo<>(lus);
+          List<User> lvs = new ArrayList<>();
+          int i=0;
+            for (User vi:lus) {
+                i++;
+                if(i>=start&&i<start+size){
+                    lvs.add(vi);
+                }
+            }
+          Map<String, Object> map = new HashMap<>();
+          map.put("rows", lvs);
+          map.put("total", pagev.getTotal());
+          return map;
+    }
 
 
-//    @RequestMapping("/destroyUser")
-//    @ResponseBody
-//    public JSONObject destroyUser(int id){
-//        JSONObject json = new JSONObject();
-//        try{
-//            userinfomapper.destroyUser(id);
-//            json.put("success","success");
-//        }catch (Exception e){
-//            json.put("errorMsg",e);
-//        }
-//        return json;
-//    }
-//    @RequestMapping("/setNewUser")
-//    @ResponseBody
-//    public JSONObject setNewUser(User us){
-//        JSONObject json = new JSONObject();
-//        try{
-//            JSONObject jj = loginVerification(us.getUsername());
-//            if(jj.get("msg")=="success"){
-//                Date dt = new Date();
-//                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//                String nowtime = df.format(dt).toString();
-//                us.setRegdate(nowtime);
-//                if(us.getPhoto()==null){
-//                    us.setPhoto("/images/touxiang/tou1.jpg");
-//                }
-//                userinfomapper.setUser(us);
-//                json.put("success","success");
-//            }else {
-//                json.put("errorMsg","用户名已存在!");
-//            }
-//        }catch (Exception e){
-//            json.put("errorMsg",e);
-//        }
-//        return json;
-//    }
+    @RequestMapping("/destroyUser")
+    @ResponseBody
+    public JSONObject destroyUser(int id){
+        JSONObject json = new JSONObject();
+        try{
+            userInfoService.destroyUser(id);
+            json.put("success","success");
+        }catch (Exception e){
+            json.put("errorMsg",e);
+        }
+        return json;
+    }
+    @RequestMapping("/setNewUser")
+    @ResponseBody
+    public JSONObject setNewUser(User us){
+        JSONObject json = new JSONObject();
+        try{
+            JSONObject jj = loginVerification(us.getUsername());
+            if(jj.get("msg")=="success"){
+                Date dt = new Date();
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String nowtime = df.format(dt).toString();
+                us.setRegdate(nowtime);
+                if(us.getPhoto()==null){
+                    us.setPhoto("/images/touxiang/tou1.jpg");
+                }
+                userInfoService.setUser(us);
+                json.put("success","success");
+            }else {
+                json.put("errorMsg","用户名已存在!");
+            }
+        }catch (Exception e){
+            json.put("errorMsg",e);
+        }
+        return json;
+    }
 
 }

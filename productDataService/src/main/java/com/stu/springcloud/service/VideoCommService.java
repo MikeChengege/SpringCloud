@@ -16,11 +16,21 @@ public class VideoCommService {
     public List<VideoComm> getCommAndPeo(int id){
         return videoCommMapper.getCommAndPeo(id);
     }
+    public List<VideoComm> getAllComm(){
+        return videoCommMapper.getAll();
+    }
     public void insertComm(VideoComm vic){
         videoCommMapper.insertComm(vic);
     }
     public void updateHadLike(VideoComm vic){
         videoCommMapper.updateHadLike(vic);
+    }
+    public void updVideocomm(VideoComm vic){
+        videoCommMapper.updVideocomm(vic);
+    }
+
+    public void delVideocomm(int id){
+        videoCommMapper.delVideocomm(id);
     }
     public VideoComm getCommById(int id){
         return videoCommMapper.getById(id);

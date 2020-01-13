@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Service
 public class UserInfoService {
@@ -38,6 +39,9 @@ public class UserInfoService {
     public User getUserInfoById(int id){
         return productClientRibbon.getUserInfoById(id);
     }
+    public List<User> getAllUser(){
+        return productClientRibbon.getAllUser();
+    }
     public String findHasUserName(String username){
         User us =productClientRibbon.Verification(username);
         if(us==null){
@@ -51,5 +55,8 @@ public class UserInfoService {
     }
     public void setUser(User us){
         productClientRibbon.setUser(us);
+    }
+    public void destroyUser(int id){
+        productClientRibbon.destroyUser(id);
     }
 }

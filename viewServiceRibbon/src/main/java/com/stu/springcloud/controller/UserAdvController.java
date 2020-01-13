@@ -2,13 +2,18 @@ package com.stu.springcloud.controller;
 
 
 import cn.hutool.json.JSONObject;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.stu.springcloud.modle.UserAdv;
 import com.stu.springcloud.modle.UserView;
 import com.stu.springcloud.modle.Video;
+import com.stu.springcloud.service.UserAdvService;
 import com.stu.springcloud.service.UserSeeHistoryService;
 import com.stu.springcloud.service.VideoInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -25,6 +30,8 @@ public class UserAdvController {
     UserSeeHistoryService userSeeHistoryService;
     @Autowired
     VideoInfoService videoInfoService;
+    @Autowired
+    UserAdvService userAdvService;
     @RequestMapping("/getHadView")
     @ResponseBody
     public JSONObject getHadView(int id){
@@ -40,57 +47,57 @@ public class UserAdvController {
         json.put("msg",lv);
         return  json;
     }
-//    @RequestMapping("/getUserAdv")
-//    @ResponseBody
-//    public Map<String, Object> getUserInfomation(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
-//        int start = (page-1)*rows+1;
-//        int size = rows;
-//        PageHelper.startPage(start,size,"id desc");
-//        List<UserAdv> lus = useradvmapper.getAdv();
-//        PageInfo<UserAdv> pagev = new PageInfo<>(lus);
-//        List<UserAdv> lvs = new ArrayList<>();
-//        int i=0;
-//        for (UserAdv vi:lus) {
-//            i++;
-//            if(i>=start&&i<start+size){
-//                lvs.add(vi);
-//            }
-//        }
-//        Map<String, Object> map = new HashMap<>();
-//        map.put("rows", lvs);
-//        map.put("total", pagev.getTotal());
-//        return map;
-//    }
-//    @RequestMapping("/updateUserAdv")
-//    @ResponseBody
-//    public JSONObject updateUserAdv(UserAdv uav){
-//        JSONObject json = new JSONObject();
-//        try{
-//            useradvmapper.updateUserAdv(uav);
-//            json.put("msg","success");
-//        }catch (Exception e){
-//            json.put("errorMsg",e);
-//        }
-//        return  json;
-//    }
-//    @RequestMapping("/deleteUserAdv")
-//    @ResponseBody
-//    public JSONObject deleteUserAdv(int id){
-//        JSONObject json = new JSONObject();
-//        try {
-//            UserAdv uav = useradvmapper.getAdvById(id);
-//            if(uav!=null){
-//                useradvmapper.deleteUserAdv(id);
-//                json.put("success","success");
-//            }else {
-//                json.put("errorMsg","此用户不存在");
-//            }
-//        }catch (Exception e){
-//            json.put("errorMsg",e);
-//        }
-//        return  json;
-//    }
-//
+    @RequestMapping("/getUserAdv")
+    @ResponseBody
+    public Map<String, Object> getUserInfomation(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "rows", defaultValue = "10") int rows){
+        int start = (page-1)*rows+1;
+        int size = rows;
+        PageHelper.startPage(start,size,"id desc");
+        List<UserAdv> lus = userAdvService.getAdv();
+        PageInfo<UserAdv> pagev = new PageInfo<>(lus);
+        List<UserAdv> lvs = new ArrayList<>();
+        int i=0;
+        for (UserAdv vi:lus) {
+            i++;
+            if(i>=start&&i<start+size){
+                lvs.add(vi);
+            }
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("rows", lvs);
+        map.put("total", pagev.getTotal());
+        return map;
+    }
+    @RequestMapping("/updateUserAdv")
+    @ResponseBody
+    public JSONObject updateUserAdv(UserAdv uav){
+        JSONObject json = new JSONObject();
+        try{
+            userAdvService.updateUserAdv(uav);
+            json.put("msg","success");
+        }catch (Exception e){
+            json.put("errorMsg",e);
+        }
+        return  json;
+    }
+    @RequestMapping("/deleteUserAdv")
+    @ResponseBody
+    public JSONObject deleteUserAdv(int id){
+        JSONObject json = new JSONObject();
+        try {
+            UserAdv uav = userAdvService.getAdvById(id);
+            if(uav!=null){
+                userAdvService.deleteUserAdv(id);
+                json.put("success","success");
+            }else {
+                json.put("errorMsg","此用户不存在");
+            }
+        }catch (Exception e){
+            json.put("errorMsg",e);
+        }
+        return  json;
+    }
+
     @RequestMapping("/addHadView")
     @ResponseBody
     public  JSONObject addHadView(UserView uv){

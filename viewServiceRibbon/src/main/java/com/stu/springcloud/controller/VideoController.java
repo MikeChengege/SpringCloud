@@ -204,7 +204,6 @@ public class VideoController {
             searcon = "%"+searcon+"%";
             try {
                 lv = videoInfoService.getSearchContent(searcon);
-                System.out.println("查出的结果为"+lv.toString());
             }catch (Exception e){
                 System.out.println(e);
             }

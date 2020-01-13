@@ -61,6 +61,11 @@ public class VideoController {
         List<Video> limag = videoInfoService.getVideoByUser(name);
         return limag;
     }
+    @RequestMapping("/delVideocomm")
+    @ResponseBody
+    public void delVideocomm(int id){
+        videoCommService.delVideocomm(id);
+    }
 //    @RequestMapping("/getvideoPage")
 //    @ResponseBody
 //    public PageInfo getPageVideo(Model m, @RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "size", defaultValue = "5") int size) throws Exception {
@@ -108,6 +113,13 @@ public class VideoController {
         List<VideoComm> videoComm =videoCommService.getCommAndPeo(id);
         return videoComm;
     }
+
+    @RequestMapping("/getAllComm")
+    @ResponseBody
+    public List<VideoComm> getAllComm(){
+        List<VideoComm> videoComm =videoCommService.getAllComm();
+        return videoComm;
+    }
     @RequestMapping("/insertComm")
     @ResponseBody
     public void insertComm(@RequestBody VideoComm vicm){
@@ -130,6 +142,12 @@ public class VideoController {
     @ResponseBody
     public void updateHadLike(@RequestBody VideoComm vicm){
         videoCommService.updateHadLike(vicm);
+    }
+
+    @RequestMapping("/updVideocomm")
+    @ResponseBody
+    public void updVideocomm(@RequestBody VideoComm vicm){
+        videoCommService.updVideocomm(vicm);
     }
     @RequestMapping("/getCommById")
     @ResponseBody

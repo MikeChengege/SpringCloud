@@ -30,9 +30,27 @@ public class UploadController {
         videoSubService.updateSubTime(vs);
     }
 
+    @RequestMapping("/updateSub")
+    @ResponseBody
+    public void updateSub(@RequestBody VideoSub vs){
+        videoSubService.updateSub(vs);
+    }
+
     @RequestMapping("/insertVidSub")
     @ResponseBody
     public void insertVidSub(int id){
         videoSubService.insertVidSub(id);
+    }
+
+    @RequestMapping("/getSub")
+    @ResponseBody
+    public List<VideoSub> getSub(){
+        return videoSubService.getSub();
+    }
+
+    @RequestMapping("/getSubById")
+    @ResponseBody
+    public VideoSub getSubById(int id){
+        return videoSubService.getSubById(id);
     }
 }

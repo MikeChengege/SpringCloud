@@ -2,6 +2,7 @@ package com.stu.springcloud.controller;
 
 import java.util.List;
 
+import com.stu.springcloud.modle.Manager;
 import com.stu.springcloud.modle.Product;
 import com.stu.springcloud.modle.User;
 import com.stu.springcloud.modle.Video;
@@ -141,7 +142,61 @@ public class ProductController {
     }
 
     @RequestMapping("/Mosttv/magindex")
-    public String magindex(){
+    public String magindex(HttpSession session){
+        if(session.getAttribute("maguser")!=null){
+            Manager mg = (Manager)session.getAttribute("maguser");
+            session.setAttribute("sessionMagUser",mg);
+        }else {
+            session.setAttribute("sessionMagUser",null);
+        }
         return "magindex";
+    }
+
+    @RequestMapping("/Mosttv/examinevideo")
+    public String examinevideo(HttpSession session){
+        if(session.getAttribute("maguser")!=null){
+            Manager mg = (Manager)session.getAttribute("maguser");
+            session.setAttribute("sessionMagUser",mg);
+        }else {
+            session.setAttribute("sessionMagUser",null);
+        }
+        return "examinevideo";
+    }
+
+    @RequestMapping("/Mosttv/examineuser")
+    public String examineuser(HttpSession session){
+        if(session.getAttribute("maguser")!=null){
+            Manager mg = (Manager)session.getAttribute("maguser");
+            session.setAttribute("sessionMagUser",mg);
+        }else {
+            session.setAttribute("sessionMagUser",null);
+        }
+        return "examineuser";
+    }
+
+    @RequestMapping("/Mosttv/examinecomm")
+    public String examinecomm(HttpSession session){
+        if(session.getAttribute("maguser")!=null){
+            Manager mg = (Manager)session.getAttribute("maguser");
+            session.setAttribute("sessionMagUser",mg);
+        }else {
+            session.setAttribute("sessionMagUser",null);
+        }
+        return "examinecomm";
+    }
+    @RequestMapping("/Mosttv/maguseradv")
+    public String maguseradv(HttpSession session){
+        if(session.getAttribute("maguser")!=null){
+            Manager mg = (Manager)session.getAttribute("maguser");
+            session.setAttribute("sessionMagUser",mg);
+        }else {
+            session.setAttribute("sessionMagUser",null);
+        }
+        return "maguseradv";
+    }
+    @RequestMapping("/Mosttv/magquit")
+    public String Magquit(HttpServletRequest request){
+        request.getSession().invalidate();
+        return "maglogin";
     }
 }

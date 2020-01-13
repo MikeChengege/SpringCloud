@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:c="http://java.sun.com/xml/ns/javaee">
+<head>
+    <meta charset="UTF-8">
+    <title>谋思特视频</title>
+    <script type="text/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
+
+    <script type="text/javascript" src="../static/js/bootstrap.min.js" th:src="@{/static/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" type="text/css"  href="../static/css/3.3.6/bootstrap.min.css" th:href="@{/static/css/3.3.6/bootstrap.min.css}">
+
+    <link rel="stylesheet" type="text/css"  href="../static/css/magstyle.css" th:href="@{/static/css/magstyle.css}">
+
+    <link rel="stylesheet" type="text/css"  href="../static/css/easyui/easyui.css" th:href="@{/static/css/easyui/easyui.css}">
+    <link rel="stylesheet" type="text/css"  href="../static/css/easyui/icon.css" th:href="@{/static/css/easyui/icon.css}">
+
+    <script type="text/javascript" src="../static/js/musicshow/jquery-2.1.1.min.js" th:src="@{/static/js/musicshow/jquery-2.1.1.min.js}"></script>
+    <script type="text/javascript" src="../static/js/jquery.easyui.min.js" th:src="@{/static/js/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" src="../static/js/jquery.edatagrid.js" th:src="@{/static/js/jquery.edatagrid.js}"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            function rd(){
+                $("#dg").datagrid('reload');
+            }
+            $("#addrow").click(function () {
+                $("#rightSecond").attr("style","");
+                $("#rightFirst").remove();
+
+            })
+            $("#upload").click(function () {
+                alert("视频标题为空");
+            })
+
+        });
+    </script>
+    <style type="text/css">
+        a{ color:#000; text-decoration:none;}
+        a:link{ color:#000; text-decoration:none;}
+        a:hover{color:#C03;text-decoration:none;}
+        a:active{ color:#000; text-decoration:none;}
+        a:visited{
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div id="all">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div id="top">
+            <div id="logoAndList">
+                <button class="btn btn-default" style="border: 0px; margin-left: 25px;">
+                    <span class="glyphicon glyphicon-list"></span>
+                </button>
+                <a href="magindex"><img th:src="@{/static/image/shouye.jpg}" title="MostTV 首页"/></a>
+            </div>
+            <div id="topRight" style="float: right;font-size: 15px">
+
+                <a th:if="${session.sessionMagUser}">
+                    欢迎你管理员：<span  id="managename" th:text="${session.sessionMagUser.username}" title="点击进入个人界面"></span>
+                </a>
+                <a th:if="${session.sessionMagUser}">
+                    <input type="hidden" id="magid" th:value="${session.sessionMagUser.id}">
+                </a>
+                <a th:unless="${session.sessionMagUser}">
+                    <c:redirect url="/Mosttv/maglogin"/>
+                    <!--<span style="color: #00b7ee"><a href="/MostTV/maglogin?name=<%=sessionValues%>" >非法进入，请登录</a></span>-->
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="below" >
+        <div id="left">
+            <div id="leftTop">
+                <ul class="nav nav-pills nav-stacked"  >
+                    <li role="presentation" style="margin-top: 20px">
+                        <a href="magindex" id="index">
+                            <span class="glyphicon glyphicon-adjust" style="margin-left: 14%;"/> 资源调整审核
+                        </a>
+                    </li>
+                    <li role="presentation">
+
+                        <a href="examinevideo" id="mostSee" >
+                            <span  class="glyphicon glyphicon-edit" style="margin-left: 14%;"/> 视频详细管理
+                        </a>
+
+                    </li>
+                    <li role="presentation">
+                        <a href="examineuser" id="examineuser"  style="color: red">
+                            <span class="glyphicon glyphicon-user" style="margin-left: 14%"/> 用户信息管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="examinecomm" id="rankingList">
+                            <span class="glyphicon glyphicon-comment" style="margin-left: 14%"/> 用户评论管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="maguseradv" id="maguseradv">
+                            <span class="glyphicon glyphicon-bullhorn" style="margin-left: 14%;"/> 用户建议
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/Mosttv/magquit" id="backLogin">
+                            <span class="glyphicon glyphicon-log-out" style="margin-left: 14%"/> 退出登录
+                        </a>
+                    </li>
+                    <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;" />
+                </ul>
+            </div><br/>
+            <div id="leftAbout" style="margin: 0 10px 0 10px;height: 300px;width: 180px">
+                <span style="margin-left: 30px;font-size:18px">MostvTV声明</span><br><br>
+                <span style="margin-top: 10px">
+                        &nbsp; &nbsp;本网站的内容、图文来自于网络,我们尊重他人的合法权益,如有内容侵犯您的合法权益,请及时与我们联系,我们将第一时间安排核实及删除!</li>
+                    </span>
+                <br/>
+                <span>法务联系:657281999@qq.com</span><br/>
+                <span style="margin-left: 20%">版权所有MOSTTV</span><br/>
+                <span style="margin-left: 20%">ICP证陕17003214</span>
+            </div>
+        </div>
+
+        <div id="right">
+            <table id="dg" title="用户信息管理" class="easyui-datagrid" style="width:95%;height:450px"
+                   url="/getuserinfomation"
+                   toolbar="#toolbar" pagination="true"
+                   rownumbers="true" fitColumns="true" singleSelect="true">
+                <thead>
+                <tr>
+                    <th field="id" width="50">用户编号</th>
+                    <th field="username" width="50">用户名</th>
+                    <th field="telephone" width="50">电话</th>
+                    <th field="email" width="50">邮箱</th>
+                    <th field="photo" width="50">用户头像</th>
+                    <th field="regdate" width="50">注册时间</th>
+                </tr>
+                </thead>
+            </table>
+            <div id="toolbar">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">新建用户</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">编辑用户</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">删除用户</a>
+            </div>
+
+            <div id="dlg" class="easyui-dialog" style="width:400px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
+                <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
+                    <h4>用户信息</h4>
+                    <div style="margin-bottom:10px">
+                        <input id="username" class="easyui-textbox" required="true" label="用户名:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input id="password" class="easyui-passwordbox" required="true" label="密码:" style="width:100%">
+                    </div>
+                    <div  style="margin-bottom:10px">
+                        <input id="telephone" class="easyui-textbox" required="true" label="电话:" style="width:100%">
+                    </div>
+                    <div id="editphoto"  style="margin-bottom:10px">
+                        <input id="photo" class="easyui-textbox" required="true" label="头像:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input id="email" class="easyui-textbox" required="true" validType="email" label="邮箱:" style="width:100%">
+                    </div>
+                </form>
+            </div>
+            <div id="dlg-buttons">
+                <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">保存</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">取消</a>
+            </div>
+            <script type="text/javascript">
+                var url;
+                function newUser(){
+                    $("#editphoto").hide();
+                    $('#dlg').dialog('open').dialog('center').dialog('setTitle','新建用户');
+                    $('#fm').form('clear');
+                    url = '/setNewUser';
+                }
+                function editUser(){
+                    $("#editphoto").show();
+                    var row = $('#dg').datagrid('getSelected');
+                    if (row){
+                        $('#dlg').dialog('open').dialog('center').dialog('setTitle','修改用户');
+                        $('#fm').form('load',row);
+                        url = '/updateUserInfo?id='+row.id;
+                    }else {
+                        $.messager.show({
+                            title: '错误',
+                            msg: '请选择要修改的列'
+                        });
+                    }
+                }
+                function saveUser(){
+                    var data={
+                        "username":$("#username").val(),
+                        "password":$("#password").val(),
+                        "telephone":$("#telephone").val(),
+                        "photo":$("#photo").val(),
+                        "email":$("#email").val()
+                    }
+                    $.ajax({
+                        type:"post",
+                        url:"/setNewUser",
+                        data:data,
+                        async: false,
+                        success:function (result) {
+                                    var result = eval('('+result+')');
+                                    if (result.errorMsg){
+                                        $.messager.show({
+                                            title: 'Error',
+                                            msg: result.errorMsg
+                                        });
+                                    } else {
+                                        $('#dlg').dialog('close');		// close the dialog
+                                        $('#dg').datagrid('reload');	// reload the user data
+                                    }
+                        }
+                    })
+                    $('#fm').submit();
+                    // $('#fm').form('submit',{
+                    //     url: '/setNewUser',
+                    //     onSubmit: function(){
+                    //         return $(this).form('validate');
+                    //     },
+                    //     success: function(result){
+                    //         var result = eval('('+result+')');
+                    //         if (result.errorMsg){
+                    //             $.messager.show({
+                    //                 title: 'Error',
+                    //                 msg: result.errorMsg
+                    //             });
+                    //         } else {
+                    //             $('#dlg').dialog('close');		// close the dialog
+                    //             $('#dg').datagrid('reload');	// reload the user data
+                    //         }
+                    //     }
+                    // });
+                }
+                function destroyUser(){
+                    var row = $('#dg').datagrid('getSelected');
+                    if (row){
+                        $.messager.confirm('删除','确定删除此用户?',function(r){
+                            if (r){
+                                $.post('/destroyUser',{id:row.id},function(result){
+                                    if (result.success){
+                                        $('#dg').datagrid('reload');	// reload the user data
+                                    } else {
+                                        $.messager.show({	// show error message
+                                            title: 'Error',
+                                            msg: result.errorMsg
+                                        });
+                                    }
+                                },'json');
+                            }
+                        });
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="../static/js/mgadjust.js" th:src="@{/static/js/mgadjust.js}"></script>
+</body>
+</html>

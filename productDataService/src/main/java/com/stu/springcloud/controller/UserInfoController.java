@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 /**
  * Created by mikechen on 2018/9/21.
@@ -41,6 +43,19 @@ public class UserInfoController {
     @ResponseBody
     public void setUser(@RequestBody User us){
         userService.setUser(us);
+    }
+
+
+    @RequestMapping("/destroyUser")
+    @ResponseBody
+    public void destroyUser(int id){
+        userService.destroyUser(id);
+    }
+
+    @RequestMapping("/getAllUser")
+    @ResponseBody
+    public List<User> getAllUser(){
+        return userService.getAllUser();
     }
 //    @RequestMapping("/loginVerification/Verification")
 //    @ResponseBody

@@ -202,4 +202,64 @@ public class ProductClientFeignHystrix  implements ProductClientRibbon{
     public Manager getMangByName(String name) {
         return null;
     }
+
+    @Override
+    public List<VideoSub> getSub() {
+        return null;
+    }
+
+    @Override
+    public VideoSub getSubById(int id) {
+        return null;
+    }
+
+    @Override
+    public void updateSub(VideoSub vs) {
+
+    }
+
+    @Override
+    public List<User> getAllUser() {
+        return null;
+    }
+
+    @Override
+    public void destroyUser(int id) {
+
+    }
+
+    @Override
+    public List<VideoComm> getAllComm() {
+        return null;
+    }
+
+    @Override
+    public void updVideocomm(VideoComm vic) {
+
+    }
+
+    @Override
+    public void delVideocomm(int id) {
+
+    }
+
+    @Override
+    public List<UserAdv> getAdv() {
+        return null;
+    }
+
+    @Override
+    public UserAdv getAdvById(int id) {
+        return null;
+    }
+
+    @Override
+    public void deleteUserAdv(int id) {
+
+    }
+
+    @Override
+    public void updateUserAdv(UserAdv uadv) {
+
+    }
 }

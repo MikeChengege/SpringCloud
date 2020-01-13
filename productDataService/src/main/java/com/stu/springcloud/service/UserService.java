@@ -5,6 +5,8 @@ import com.stu.springcloud.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
@@ -17,11 +19,18 @@ public class UserService {
         User us = userInfoMapper.getById(id);
         return  us;
     }
+
+    public List<User> getAllUser(){
+        return  userInfoMapper.getAllUser();
+    }
     public void updateUser(User us){
         userInfoMapper.updateUser(us);
     }
     public void setUser(User us){
         userInfoMapper.setUser(us);
+    }
+    public void destroyUser(int id){
+        userInfoMapper.destroyUser(id);
     }
 
 }

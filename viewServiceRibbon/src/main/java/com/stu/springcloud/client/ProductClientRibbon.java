@@ -29,6 +29,19 @@ public interface ProductClientRibbon {
     public List<Video> getAllTv(@RequestParam("videoType") int videoType);
     @GetMapping("/submitAdvice")
     public List<Video> submitAdvice(UserAdv uadv);
+
+    @GetMapping("/getAdv")
+    public List<UserAdv> getAdv();
+
+    @GetMapping("/updateUserAdv")
+    public void updateUserAdv(@RequestBody UserAdv uadv);
+
+    @GetMapping("/getAdvById")
+    public UserAdv getAdvById(@RequestParam("id") int id);
+
+    @GetMapping("/deleteUserAdv")
+    public void deleteUserAdv(@RequestParam("id") int id);
+
     @GetMapping("/userCollection")
     public List<UserCollection> userCollection(@RequestParam("id") int id);
     @GetMapping("/addCollect")
@@ -41,6 +54,8 @@ public interface ProductClientRibbon {
     public List<Video> getVideoByName(@RequestParam("name") String name);
     @GetMapping("/getUserInfoById")
     public User getUserInfoById(@RequestParam("uid") int uid);
+    @GetMapping("/getAllUser")
+    public List<User> getAllUser();
     @GetMapping("/updateUser")
     public User updateUser(@RequestBody User user);
     @GetMapping("/getHadView")
@@ -68,19 +83,34 @@ public interface ProductClientRibbon {
     @GetMapping("/getCommAndPeo")
     public List<VideoComm> getCommAndPeo(@RequestParam("id") int id);
 
+    @GetMapping("/getAllComm")
+    public List<VideoComm> getAllComm();
+
     @GetMapping("/getCommById")
     public VideoComm getCommById(@RequestParam("id") int id);
     @GetMapping("/insertComm")
     public void insertComm(@RequestBody VideoComm vic);
     @GetMapping("/updateHadLike")
     public void updateHadLike(@RequestBody VideoComm vic);
+
+    @GetMapping("/updVideocomm")
+    public void updVideocomm(@RequestBody VideoComm vic);
+
+    @GetMapping("/delVideocomm")
+    public void delVideocomm(@RequestParam("id") int id);
+
     @GetMapping("/updateVideoComm")
     public void updateVideoComm(@RequestBody Video vi);
 
     @GetMapping("/getTvSub")
     public List<TvSub> getTvSub(@RequestParam("id") int id);
+
     @GetMapping("/updateSubTime")
     public void updateSubTime(@RequestBody VideoSub vs);
+
+    @GetMapping("/updateSub")
+    public void updateSub(@RequestBody VideoSub vs);
+
     @GetMapping("/insertVideoInfo")
     public void insertVideoInfo(@RequestBody Video vi);
 
@@ -90,11 +120,20 @@ public interface ProductClientRibbon {
     @GetMapping("/insertVidSub")
     public void insertVidSub(@RequestParam("id") int id);
 
+    @GetMapping("/getSub")
+    public List<VideoSub> getSub();
+
+    @GetMapping("/getSubById")
+    public VideoSub getSubById(@RequestParam("id") int id);
+
     @GetMapping("/getSearchContent")
     public List<Video> getSearchContent(@RequestParam("name") String name);
 
     @GetMapping("/setUser")
     public void setUser(@RequestBody User us);
+
+    @GetMapping("/destroyUser")
+    public void destroyUser(@RequestParam("id") int id);
 
     @GetMapping("/getMangByName")
     public Manager getMangByName(@RequestParam("name") String name);

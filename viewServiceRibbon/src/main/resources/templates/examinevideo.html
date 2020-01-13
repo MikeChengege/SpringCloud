@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:c="http://java.sun.com/xml/ns/javaee" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>谋思特视频</title>
+    <script type="text/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
+
+    <script type="text/javascript" src="../static/js/bootstrap.min.js" th:src="@{/static/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" type="text/css"  href="../static/css/3.3.6/bootstrap.min.css" th:href="@{/static/css/3.3.6/bootstrap.min.css}">
+
+    <link rel="stylesheet" type="text/css"  href="../static/css/magstyle.css" th:href="@{/static/css/magstyle.css}">
+
+    <link rel="stylesheet" type="text/css"  href="../static/css/easyui/easyui.css" th:href="@{/static/css/easyui/easyui.css}">
+    <link rel="stylesheet" type="text/css"  href="../static/css/easyui/icon.css" th:href="@{/static/css/easyui/icon.css}">
+
+    <script type="text/javascript" src="../static/js/musicshow/jquery-2.1.1.min.js" th:src="@{/static/js/musicshow/jquery-2.1.1.min.js}"></script>
+    <script type="text/javascript" src="../static/js/jquery.easyui.min.js" th:src="@{/static/js/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" src="../static/js/jquery.edatagrid.js" th:src="@{/static/js/jquery.edatagrid.js}"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#dg').edatagrid({
+                url: '/getvideovisit',
+                saveUrl: 'save_user.php',
+                updateUrl: '/updateVideoSub',
+                destroyUrl: ''
+            });
+        });
+    </script>
+    <style type="text/css">
+        a{ color:#000; text-decoration:none;}
+        a:link{ color:#000; text-decoration:none;}
+        a:hover{color:#C03;text-decoration:none;}
+        a:active{ color:#000; text-decoration:none;}
+        a:visited{
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#left").mouseover(function(){
+                $("#left").attr("style","overflow:auto;overflow-y:auto;position: absolute;height: 100%;");
+            });
+
+            $("#left").mouseleave(function(){
+                $("#left").attr("style","overflow:auto;");
+            });
+            $("[data-toggle='tooltip']").tooltip();
+        })
+    </script>
+</head>
+<body>
+<div id="all">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div id="top">
+            <div id="logoAndList">
+                <button class="btn btn-default" style="border: 0px; margin-left: 25px;">
+                    <span class="glyphicon glyphicon-list"></span>
+                </button>
+                <a href="magindex"><img th:src="@{/static/image/shouye.jpg}" title="MostTV 首页"/></a>
+            </div>
+            <div id="topRight" style="float: right;font-size: 15px">
+
+                <a th:if="${session.sessionMagUser}">
+                    欢迎你管理员：<span  id="managename" th:text="${session.sessionMagUser.username}" title="点击进入个人界面"></span>
+                </a>
+                <a th:if="${session.sessionMagUser}">
+                    <input type="hidden" id="magid" th:value="${session.sessionMagUser.id}">
+                </a>
+                <a th:unless="${session.sessionMagUser}">
+                    <c:redirect url="/Mosttv/maglogin"/>
+                    <!--<span style="color: #00b7ee"><a href="/MostTV/maglogin?name=<%=sessionValues%>" >非法进入，请登录</a></span>-->
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="below" >
+        <div id="left">
+            <div id="leftTop">
+                <ul class="nav nav-pills nav-stacked"  >
+                    <li role="presentation" style="margin-top: 20px">
+                        <a href="magindex" id="magindex">
+                            <span class="glyphicon glyphicon-adjust" style="margin-left: 14%;"/> 资源调整审核
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="examinevideo" id="examinevideo" style="color: red" >
+                            <span  class="glyphicon glyphicon-edit" style="margin-left: 14%;"/> 视频详细管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="examineuser" id="examineuser">
+                            <span class="glyphicon glyphicon-user" style="margin-left: 14%"/> 用户信息管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="examinecomm" id="examinecomm">
+                            <span class="glyphicon glyphicon-comment" style="margin-left: 14%"/> 用户评论管理
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="maguseradv" id="maguseradv">
+                            <span class="glyphicon glyphicon-bullhorn" style="margin-left: 14%;"/> 用户建议
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/Mosttv/magquit" id="backLogin">
+                            <span class="glyphicon glyphicon-log-out" style="margin-left: 14%"/> 退出登录
+                        </a>
+                    </li>
+                    <hr style="height:1px;border:none;border-top:1px solid  #dcdcdc;" />
+                </ul>
+            </div><br/>
+            <div id="leftAbout" style="margin: 0 10px 0 10px;height: 300px;width: 180px">
+                <span style="margin-left: 30px;font-size:18px">MostvTV声明</span><br><br>
+                <span style="margin-top: 10px">
+                        &nbsp; &nbsp;本网站的内容、图文来自于网络,我们尊重他人的合法权益,如有内容侵犯您的合法权益,请及时与我们联系,我们将第一时间安排核实及删除!</li>
+                    </span>
+                <br/>
+                <span>法务联系:657281999@qq.com</span><br/>
+                <span style="margin-left: 20%">版权所有MOSTTV</span><br/>
+                <span style="margin-left: 20%">ICP证陕17003214</span>
+            </div>
+        </div>
+
+        <div id="right">
+            <table id="dg" title="视频详细管理" style="width:95%;height:450px"
+                   toolbar="#toolbar" pagination="true" idField="id"
+                   rownumbers="true" fitColumns="true" singleSelect="true">
+                <thead>
+                <tr>
+                    <th field="video_hot" width="50" editor="{type:'numberbox'}">首页显示</th>
+                    <th field="video_playtype" width="50" editor="text">目前状态</th>
+                    <th field="video_updatetiem" width="50" editor="text">更新时间</th>
+                    <th field="video_videotype" width="50"  editor="text">视频类型</th>
+                    <th field="video_score" width="50"  editor="{type:'numberbox',options:{precision:1}}">评分</th>
+                    <th field="video_backtime" width="50" editor="text">回归时间</th>
+                    <th field="video_duration" width="50" >视频时长</th>
+                    <th field="id" width="50">编号</th>
+                    <th field="video_id" width="50" >视频编号</th>
+                </tr>
+                </thead>
+            </table>
+            <div id="toolbar">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:$('#dg').edatagrid('saveRow')">保存</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#dg').edatagrid('cancelRow')">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

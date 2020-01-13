@@ -4,6 +4,7 @@ package com.stu.springcloud.controller;
 
 import com.stu.springcloud.model.Manager;
 import com.stu.springcloud.model.UserAdv;
+import com.stu.springcloud.model.VideoSub;
 import com.stu.springcloud.service.MaginfoService;
 import com.stu.springcloud.service.UserAdvService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -36,6 +38,7 @@ public class MagController {
     public void submitAdvice(UserAdv uadv){
         userAdvService.submitAdvice(uadv);
     }
+
 //    @RequestMapping("/savedgrid")
 //    @ResponseBody
 //    public void savedgrid(Video vi){
