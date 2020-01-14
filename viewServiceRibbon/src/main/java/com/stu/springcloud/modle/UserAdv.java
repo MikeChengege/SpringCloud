@@ -3,6 +3,7 @@ package com.stu.springcloud.modle;
 public class UserAdv {
     private int id;
     private int user_id;
+    private String username;
     private String advtext;
     private String advtime;
     private int advtype;
@@ -49,5 +50,11 @@ public class UserAdv {
         this.advtime = advtime;
     }
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }

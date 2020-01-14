@@ -8,6 +8,7 @@ import com.stu.springcloud.modle.UserAdv;
 import com.stu.springcloud.modle.UserView;
 import com.stu.springcloud.modle.Video;
 import com.stu.springcloud.service.UserAdvService;
+import com.stu.springcloud.service.UserInfoService;
 import com.stu.springcloud.service.UserSeeHistoryService;
 import com.stu.springcloud.service.VideoInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,8 @@ public class UserAdvController {
     VideoInfoService videoInfoService;
     @Autowired
     UserAdvService userAdvService;
+    @Autowired
+    UserInfoService userInfoService;
     @RequestMapping("/getHadView")
     @ResponseBody
     public JSONObject getHadView(int id){
@@ -54,10 +57,23 @@ public class UserAdvController {
         int size = rows;
         PageHelper.startPage(start,size,"id desc");
         List<UserAdv> lus = userAdvService.getAdv();
-        PageInfo<UserAdv> pagev = new PageInfo<>(lus);
+        List<UserAdv> ls = new ArrayList();
+        for (UserAdv lu: lus) {
+            try {
+                String name =userInfoService.getUserInfoById(lu.getUser_id()).getUsername();
+                if(name!=null){
+                    lu.setUsername(name);
+                    ls.add(lu);
+                }
+            }catch (Exception e){
+                System.out.println(e);
+            }
+
+        }
+        PageInfo<UserAdv> pagev = new PageInfo<>(ls);
         List<UserAdv> lvs = new ArrayList<>();
         int i=0;
-        for (UserAdv vi:lus) {
+        for (UserAdv vi:ls) {
             i++;
             if(i>=start&&i<start+size){
                 lvs.add(vi);
