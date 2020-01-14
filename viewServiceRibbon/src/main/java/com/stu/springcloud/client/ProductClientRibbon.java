@@ -28,7 +28,7 @@ public interface ProductClientRibbon {
     @GetMapping("/getAllTv")
     public List<Video> getAllTv(@RequestParam("videoType") int videoType);
     @GetMapping("/submitAdvice")
-    public List<Video> submitAdvice(UserAdv uadv);
+    public List<Video> submitAdvice(@RequestBody UserAdv uadv);
 
     @GetMapping("/getAdv")
     public List<UserAdv> getAdv();

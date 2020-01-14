@@ -2,44 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="187cc0e2-a233-4fd0-8b82-eefd11616b13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserCommController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/magstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examinecomm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examineuser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examinevideo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/maguseradv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hystrixDashboard/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hystrixDashboard/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productDataService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productDataService/productDataService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mosttv.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UserAdvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UserAdvController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/UserAdvService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/UserAdvService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/VideoCommService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/VideoCommService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/VideoSubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/VideoSubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientFeignHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientFeignHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trubine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trubine/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientRibbon.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientRibbon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserAdvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserAdvController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoCommService.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoCommService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoSubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoSubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/magindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/magindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/target/classes/com/stu/springcloud/client/ProductClientRibbon.class" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/target/classes/com/stu/springcloud/client/ProductClientRibbon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewServiceRibbon/target/classes/com/stu/springcloud/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/viewServiceRibbon/target/classes/com/stu/springcloud/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuulServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuulServer/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,16 +57,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examineuser.html">
+        <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-705">
-              <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="142" column="70" selection-start-line="142" selection-start-column="63" selection-end-line="142" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -99,27 +68,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="64" column="37" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="64" selection-end-column="37" />
+            <state relative-caret-position="81">
+              <caret line="137" column="41" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+              <folding>
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
+                <element signature="e#743#744#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserInfoController.java">
+        <entry file="file://$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="172" selection-start-line="172" selection-end-line="172" />
+            <state relative-caret-position="154">
+              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -137,8 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>maglogin</find>
-      <find>dg</find>
       <find>datagridjson</find>
       <find>edatagrid</find>
       <find>datagrid</find>
@@ -167,6 +154,8 @@
       <find>getAdv</find>
       <find>deleteUserAdv</find>
       <find>updateUserAdv</find>
+      <find>submit</find>
+      <find>advtext</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -182,14 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/model/TvSub.java" />
-        <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/mapper/TvSubMapper.java" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/sport.js" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/pom.xml" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/index.js" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/upload.html" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/uploadvideo.js" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UploadController.java" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/showupdate.html" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoInfoService.java" />
@@ -207,7 +188,6 @@
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/mgadjust.js" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/jquery.edatagrid.js" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/VideoController.java" />
-        <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoSubService.java" />
         <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UploadController.java" />
@@ -226,13 +206,22 @@
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examinecomm.html" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserAdvController.java" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java" />
-        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientRibbon.java" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientFeignHystrix.java" />
         <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/UserAdvController.java" />
         <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/UserAdvService.java" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/maguseradv.html" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examineuser.html" />
         <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/zuulServer/pom.xml" />
+        <option value="$PROJECT_DIR$/trubine/pom.xml" />
+        <option value="$PROJECT_DIR$/productDataService/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrixDashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/eurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/configServer/pom.xml" />
+        <option value="$PROJECT_DIR$/viewServiceRibbon/pom.xml" />
+        <option value="$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientRibbon.java" />
+        <option value="$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java" />
       </list>
     </option>
   </component>
@@ -260,11 +249,6 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="viewServiceRibbon" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="viewServiceRibbon" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
@@ -285,51 +269,69 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
+              <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
+              <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -337,8 +339,8 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -347,8 +349,8 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud" type="462c0819:PsiDirectoryNode" />
+              <item name="mosttv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mosttv" type="462c0819:PsiDirectoryNode" />
               <item name="viewServiceRibbon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -359,6 +361,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -443,6 +446,53 @@
     </configuration>
     <configuration name="ProductViewServiceRibbonApplication#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/ProductViewServiceRibbonApplication.http" index="2">
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="mosttv" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="mosttv" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="configServer" />
@@ -601,7 +651,10 @@
       <workItem from="1578877065893" duration="6462000" />
       <workItem from="1578885014221" duration="2702000" />
       <workItem from="1578893346980" duration="9233000" />
-      <workItem from="1578913865072" duration="2206000" />
+      <workItem from="1578913865072" duration="2514000" />
+      <workItem from="1578964554774" duration="153000" />
+      <workItem from="1578964835952" duration="407000" />
+      <workItem from="1578965266554" duration="903000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1577706425481</created>
@@ -708,17 +761,24 @@
       <option name="project" value="LOCAL" />
       <updated>1578755118282</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加后台管理所有页面">
+      <created>1578916129142</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1578916129142</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201130000" />
+    <option name="totallyTimeSpent" value="202901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49234694" visible="true" weight="0.25268096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49234694" visible="true" weight="0.25737265" />
       <window_info id="Structure" order="1" sideWeight="0.50765306" side_tool="true" weight="0.41689008" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -729,8 +789,8 @@
       <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49932975" weight="0.57223797" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49798927" weight="0.29036826" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.4631728" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49798927" weight="0.41926345" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3512748" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -747,7 +807,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.2841823" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.35723862" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.3297587" />
@@ -809,7 +869,8 @@
     <MESSAGE value="完成其他展示页面，个人信息页面完成一半。太困了。" />
     <MESSAGE value="用户模块已完成，个别样式仍需调优。" />
     <MESSAGE value="添加后台管理登录页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加后台管理登录页面" />
+    <MESSAGE value="添加后台管理所有页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加后台管理所有页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -826,6 +887,18 @@
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -837,96 +910,6 @@
     <SUITE FILE_PATH="coverage/springcloud$ProductViewServiceRibbonApplication.ic" NAME="ProductViewServiceRibbonApplication Coverage Results" MODIFIED="1578556668487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/MaginfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/loginAndRegist/maglogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="64" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/modle/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/magstyle.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/VideoInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAllByType#0;class#VideoInfoService#0" />
-            <element signature="e#1989#1990#0" expanded="true" />
-            <element signature="e#2054#2055#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/easyui/jquery.easyui.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/easyui/jquery.edatagrid.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/easyui/datagrid-detailview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/css/3.3.6/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/jquery.easyui.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/musicshow/jquery-2.1.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -978,26 +961,6 @@
             <element signature="e#642#643#0" expanded="true" />
             <element signature="e#674#675#0" expanded="true" />
             <element signature="e#724#725#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="226" column="45" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1071,13 +1034,6 @@
             <element signature="e#1016#1017#0" expanded="true" />
             <element signature="e#1070#1071#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
@@ -1203,23 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="41" />
-          <folding>
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientFeignHystrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -1279,16 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientRibbon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/service/UserAdvService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1342,23 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="64" column="37" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="64" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1368,7 +1280,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/examineuser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-705">
+        <state relative-caret-position="2812">
           <caret line="148" column="29" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1381,8 +1293,155 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UserInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
+        <state relative-caret-position="3097">
+          <caret line="181" column="61" selection-start-line="181" selection-start-column="61" selection-end-line="181" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuulServer/src/main/java/com/stu/springcloud/ProductServiceZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuulServer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trubine/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productDataService/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hystrixDashboard/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eurekaServer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configServer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/ProductViewServiceRibbonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="142" column="70" selection-start-line="142" selection-start-column="63" selection-end-line="142" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/resources/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="137" column="41" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/controller/MagController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/modle/UserAdv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/client/ProductClientRibbon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="28" column="74" lean-forward="true" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewServiceRibbon/src/main/java/com/stu/springcloud/service/UserAdvService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productDataService/src/main/java/com/stu/springcloud/controller/MagController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
         </state>
       </provider>
     </entry>

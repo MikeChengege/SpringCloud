@@ -9,6 +9,7 @@ import com.stu.springcloud.service.MaginfoService;
 import com.stu.springcloud.service.UserAdvService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -35,7 +36,7 @@ public class MagController {
     }
     @RequestMapping("/submitAdvice")
     @ResponseBody
-    public void submitAdvice(UserAdv uadv){
+    public void submitAdvice(@RequestBody UserAdv uadv){
         userAdvService.submitAdvice(uadv);
     }
 
