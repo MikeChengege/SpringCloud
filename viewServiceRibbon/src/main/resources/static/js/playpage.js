@@ -1,4 +1,3 @@
-
 $(function () {
     $("#right").remove();
     $("#left").remove();

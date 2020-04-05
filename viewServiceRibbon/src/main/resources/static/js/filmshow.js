@@ -27,8 +27,8 @@ $(function () {
             })
             $.each(data,function (i,item) {
                     if(item.lvs!=null){
-                        b++;
                         if(item.lvs.video_videotype=="科幻类"){
+                            b++;
                             var html="<div class=\"tvshowpic\" onclick='intoPlayPage("+item.id+",\""+item.video_title+"\")' style=\"margin-left: 3px;cursor: pointer\"><div class=\"picBig\"><a href=\"#\">";
                             html+="<img src="+item.video_pic+" style=\" width: 200px; height: 280px;\"/>"
                             html+="<span class=\"badge\" style=\"float: right\">"+item.lvs.video_score+"</span>"
@@ -44,8 +44,8 @@ $(function () {
             })
             $.each(data,function (i,item) {
                     if(item.lvs!=null){
-                        c++;
                         if(item.lvs.video_videotype=="剧情类"){
+                            c++;
                             var html="<div class=\"tvshowpic\" onclick='intoPlayPage("+item.id+",\""+item.video_title+"\")' style=\"margin-left: 3px;cursor: pointer\"><div class=\"picBig\"><a href=\"#\">";
                             html+="<img src="+item.video_pic+" style=\" width: 200px; height: 280px;\"/>"
                             html+="<span class=\"badge\" style=\"float: right\">"+item.lvs.video_score+"</span>"
@@ -61,8 +61,8 @@ $(function () {
             })
             $.each(data,function (i,item) {
                     if(item.lvs!=null){
-                        d++;
                         if(item.lvs.video_videotype=="奇幻类"){
+                            d++;
                             var html="<div class=\"tvshowpic\" onclick='intoPlayPage("+item.id+",\""+item.video_title+"\")' style=\"margin-left: 3px;cursor: pointer\"><div class=\"picBig\"><a href=\"#\">";
                             html+="<img src="+item.video_pic+" style=\" width: 200px; height: 280px;\"/>"
                             html+="<span class=\"badge\" style=\"float: right\">"+item.lvs.video_score+"</span>"

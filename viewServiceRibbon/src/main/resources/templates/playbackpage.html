@@ -6,14 +6,17 @@
 </head>
 <body>
 <div th:include="index"></div>
+<script type="application/javascript" src="../static/js/playpage.js" th:src="@{/static/js/playpage.js}"></script>
+<script type="application/javascript" src="../static/js/clipboard.min.js" th:src="@{/static/js/clipboard.min.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/playpage.css" th:href="@{/static/css/playpage.css}">
 <div id="allpage">
     <div id="play">
         <div id="playtop">
             <video id="video" controlslist="nodownload" controls preload="auto" width="100%" height="380px">
 <!--调试用-->
-                <source  id="videoaddress" src="../../video/Supergirl.mp4" type="video/mp4">
-               <!-- 服务器用
-                <source id="videoaddress" src="http://106.13.77.233:7080/video/Supergirl.mp4" type="video/mp4">-->
+                <!--<source  id="videoaddress" src="../../video/Supergirl.mp4" type="video/mp4">-->
+               <!-- 服务器用-->
+                <source id="videoaddress" src="http://121.36.45.250/data/video/The.Good.Doctor_S01E01.mp4" type="video/mp4">
             </video>
 
         </div>
@@ -61,8 +64,5 @@
     </div>
 
 </div>
-<script type="application/javascript" src="../static/js/playpage.js" th:src="@{/static/js/playpage.js}"></script>
-<script type="application/javascript" src="../static/js/clipboard.min.js" th:src="@{/static/js/clipboard.min.js}"></script>
-<link rel="stylesheet" type="text/css" media="all" href="../static/css/playpage.css" th:href="@{/static/css/playpage.css}">
 </body>
 </html>

@@ -195,6 +195,7 @@ public class ProductController {
         return "maguseradv";
     }
     @RequestMapping("/Mosttv/magquit")
+    @ResponseBody
     public String Magquit(HttpServletRequest request){
         request.getSession().invalidate();
         return "maglogin";
