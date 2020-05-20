@@ -1,5 +1,6 @@
 package com.stu.springcloud.controller;
 
+import cn.hutool.json.JSONObject;
 import com.stu.springcloud.mapper.UserInfoMapper;
 import com.stu.springcloud.model.User;
 import com.stu.springcloud.service.UserService;
@@ -26,6 +27,24 @@ public class UserInfoController {
     public User Verification(String username){
         User us =  userService.getUser(username);
         return us;
+    }
+    @RequestMapping("/IsVerification")
+    @ResponseBody
+    public JSONObject IsVerification(String username,String passwd){
+        User us =  userService.getUser(username);
+        JSONObject jsonObject = new JSONObject();
+        if(us!=null){
+            String rightpass =us.getPassword();
+            if(passwd.equals(rightpass)){
+                jsonObject.put("result", "success");
+//                session.setAttribute("useInfo",us);//把值存入session
+            }else {
+                jsonObject.put("result", "passwordError");
+            }
+        } else {
+            jsonObject.put("result", "NoUser");
+        }
+        return  jsonObject;
     }
     @RequestMapping("/getUserInfoById")
     @ResponseBody
