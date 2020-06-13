@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>谋思特视频</title>
-    <script type="application/javascript" src="../static/js/jquery.min.js" th:src="@{/static/js/jquery.min.js}"></script>
-    <script type="application/javascript" src="../static/js/index.js" th:src="@{/static/js/index.js}"></script>
-    <script type="application/javascript" src="../static/js/bootstrap.min.js" th:src="@{/static/js/bootstrap.min.js}"></script>
-    <script type="application/javascript" src="../static/js/clipboard.min.js" th:src="@{/static/js/clipboard.min.js}"></script>
-    <link rel="stylesheet" type="text/css" media="all" href="../static/css/bootstrap.css" th:href="@{/static/css/bootstrap.css}">
-    <link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css" th:href="@{/static/css/style.css}">
-    <link rel="shortcut icon" type="image/x-icon" href="/static/image/tubiao.ico" th:src="@{/static/image/tubiao.ico}" media="screen" />
+    <script type="application/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="application/javascript" src="../static/js/index.js"></script>
+    <script type="application/javascript" src="../static/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../static/js/clipboard.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/image/tubiao.ico"media="screen" />
     <style type="text/css">
         a{ color:#000; text-decoration:none;}
         a:link{ color:#000; text-decoration:none;}
@@ -32,7 +32,7 @@
             <button class="btn btn-default" style="border: 0px; margin-left: 25px;">
                 <span class="glyphicon glyphicon-list"></span>
             </button>
-            <a href="#"><img id="shouye" th:src="@{/static/image/shouye.jpg}" title="MostTV 首页"/></a>
+            <a href="/Mosttv/index"><img id="shouye" th:src="@{/static/image/shouye.jpg}" title="MostTV 首页"/></a>
         </div>
         <div id="searchdiv"  class="input-group input-group-sm" style="width: 30%; float: left;margin-top: 12px;">
             <input id="searchinp" type="text" class="form-control" placeholder="Search for...">
@@ -45,7 +45,6 @@
         <div id="topRight" style="float: left;font-size: 20px">
             <a href="#"><span id="upload" class="glyphicon glyphicon-cloud-upload"data-toggle="tooltip" data-placement="left" title="上传"/></span></a>
             <a href="#"><span id="sharehap" class="glyphicon glyphicon-share-alt" data-toggle="tooltip" data-placement="right" title="分享"/></span></a>
-
             <a href="userinformation" th:if="${session.sessionUser}" id="hadlogintext">
                  欢迎你：<span th:text="${session.sessionUser.username}"></span>
                 <input type="hidden" id="userid" th:value="${session.sessionUser.id}">

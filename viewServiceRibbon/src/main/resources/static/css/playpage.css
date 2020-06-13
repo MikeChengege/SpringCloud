@@ -10,29 +10,38 @@ a:visited{
 body {
     overflow-y: auto;
 }
+#descript{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 #allpage{
-    margin:70px 7% 0 7%;
-    width: 86%;
+    width: 70%;
     height: 600px;
+    float: left;
 }
 #play{
-    width: 63%;
+    width: 100%;
     height:100%;
     float: left;
 }#playright{
-    width: 35%;
+    width: 28%;
     float: right;
     margin-top: 0px;
     /*background-color: #66512c;*/
 }
 #playtop{
     width: 100%;
-    height:380px;
+    height:450px;
 }
 #playtxt{
     padding: 10px 0 10px 0;
     width: 100%;
-    height:70px;
+    height:17%;
 }
 .thumeMostsee{
     width: 380px;

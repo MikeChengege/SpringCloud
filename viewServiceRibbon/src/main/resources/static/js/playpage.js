@@ -17,7 +17,7 @@ $(function () {
         async: false,
         success:function (data) {
             $("#descript").html(data.video_descript)
-            $("#hadvisit").html(data.video_hadvisit)
+            $("#hadvisit").html(data.video_hadvisit+"次观看")
             $("#like").html(" "+data.video_like)
             $("#dislike").html(" "+data.video_dislike)
             $("#talktitle").html(data.video_comment)

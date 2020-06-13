@@ -16,7 +16,7 @@ $(function () {
                 html+="<span class=\"txt2\" style=\"color: #606060\">"+item.video_peop+" </span>"
                 html+="<span class=\"txt2\" style=\"color: #606060\">"+item.video_hadvisit+" 次观看,</span>"
                 html+="<span class=\"txt2\" style=\"color: #606060\">"+hadtime+" 小时前</span><br/><br/>"
-                html+="<span class=\"txt2\" style=\"color: #606060\">"+item.video_descript+"</span>"
+                html+="<span class=\"txt2 desc\" style=\"color: #606060\">"+item.video_descript+"</span>"
                 html+=" </div></div>"
                 $("#rightBottom").prepend(html);
             })

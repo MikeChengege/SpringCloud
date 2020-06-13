@@ -12,8 +12,8 @@ $(function () {
                     var hadtime= GetDateDiff(item.video_time,now,"hour");
                     if(item.lvs!=null){
                         var html="<div class=\"thume\" onclick='intoPlayPage("+item.id+",\""+item.video_title+"\")' style=\"cursor: pointer\"><div class=\"thumeTop\">";
-                        html+="<img th:src="+item.video_pic+" style=\"width: 210px; height: 120px;\"/></div><div class=\"thumeCanent\">"
-                        html+="<span class=\"txt1\" style=\"font-weight:bold\">"+item.video_descript+"</span></div><div class=\"thumeBelow\">"
+                        html+="<img src="+item.video_pic+" style=\"width: 210px; height: 120px;\"/></div><div class=\"thumeCanent\">"
+                        html+="<span class=\"txt1\" style=\"font-weight:bold\">"+item.video_title+"</span></div><div class=\"thumeBelow\">"
                         html+="<span class=\"txt2\" style=\"color: #606060\">"+item.video_peop+"</span><br/>"
                         html+="<span class=\"txt2\" style=\"color: #606060\">"+item.video_hadvisit+" 次观看,"+hadtime+" 小时前</span></div></div>"
                         $("#searchcont").prepend(html)

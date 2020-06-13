@@ -15,6 +15,9 @@ public class VideoInfoService {
     VideoInfoMapper videoInfoMapper;
     @Autowired
     TvSubMapper tvSubMapper;
+    public List<Video> getAll(){
+        return videoInfoMapper.getAll();
+    }
     public List<Video> getVideoInfo(){
         return videoInfoMapper.getBothAll();
     }

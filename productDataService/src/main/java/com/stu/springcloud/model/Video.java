@@ -16,6 +16,7 @@ public class Video {
     private int video_dislike;
     private int video_comment;
     private int video_download;
+    private int isMoblePic;
     private VideoSub lvs;
 
     public int getId() {
@@ -136,5 +137,13 @@ public class Video {
 
     public void setVideo_hadvisit(int video_hadvisit) {
         this.video_hadvisit = video_hadvisit;
+    }
+
+    public int getIsMoblePic() {
+        return isMoblePic;
+    }
+
+    public void setIsMoblePic(int isMoblePic) {
+        this.isMoblePic = isMoblePic;
     }
 }

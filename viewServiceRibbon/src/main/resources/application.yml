@@ -16,6 +16,9 @@ spring:
     static-path-pattern: /**
   resources:
     static-locations: classpath:/
+  devtools:
+    restart:
+      log-condition-evaluation-delta: false
 feign.hystrix.enabled: true
 management:
   endpoints:

@@ -41,8 +41,6 @@ public class ProductController {
         if(session.getAttribute("useInfo")!=null){
             User u = (User)session.getAttribute("useInfo");
             session.setAttribute("sessionUser",u);
-        }else {
-            session.setAttribute("sessionUser",null);
         }
         return  "index";
     }

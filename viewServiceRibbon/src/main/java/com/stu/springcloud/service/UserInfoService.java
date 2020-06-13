@@ -6,6 +6,7 @@ import com.stu.springcloud.modle.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -24,6 +25,7 @@ public class UserInfoService {
             String rightpass =us.getPassword();
             if(newpass.equals(rightpass)){
                 jsonObject.put("msg", "success");
+                session.setAttribute("sessionUser",us);
                 session.setAttribute("useInfo",us);//把值存入session
             }else {
                 jsonObject.put("msg", "error");
